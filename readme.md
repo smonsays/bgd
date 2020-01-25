@@ -33,7 +33,7 @@ For samples, labels in data:
     for mc_iter in range(mc_iters):
         bgd_optimizer.randomize_weights()
         output = model.forward(samples)
-        loss = cirterion(output, labels)
+        loss = criterion(output, labels)
         bgd_optimizer.zero_grad()
         loss.backward()
         bgd_optimizer.aggregate_grads(batch_size)
