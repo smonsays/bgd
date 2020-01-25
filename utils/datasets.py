@@ -232,35 +232,64 @@ class DatasetsLoaders:
                                                            shuffle=False, num_workers=self.num_workers,
                                                            pin_memory=pin_memory)
         if dataset == "FashionMNIST":
-            # MNIST:
+            # Fashion MNIST:
             #   type               : torch.ByteTensor
             #   shape              : train_set.train_data.shape torch.Size([60000, 28, 28])
             #   test data shape    : [10000, 28, 28]
             #   number of channels : 1
             #   Mean per channel   : fm.train_data.type(torch.FloatTensor).mean() is 72.94035223214286
             #   Std per channel    : fm.train_data.type(torch.FloatTensor).std() is 90.0211833054075
+
+            # Transforms
             self.mean = fashionmnist_mean
             self.std = fashionmnist_std
-            # transform = transforms.Compose(
-            #     [transforms.ToTensor(),
-            #      transforms.Normalize(self.mean, self.std)])
-            # transform = transforms.Compose(
-            #     [transforms.ToTensor()])
-            transform = transforms.Compose(
-                [transforms.Pad(2),
-                 transforms.ToTensor(),
-                 transforms.Normalize((72.94035223214286 / 255,), (90.0211833054075 / 255,))])
+            if kwargs.get("pad_to_32", False):
+                transform = transforms.Compose(
+                    [transforms.Pad(2, fill=0, padding_mode='constant'),
+                     transforms.ToTensor(),
+                     transforms.Normalize((72.94035223214286 / 255,), (90.0211833054075 / 255,))])
+            else:
+                transform = transforms.Compose(
+                    [transforms.ToTensor()])
 
-
-
-            self.train_set = torchvision.datasets.FashionMNIST(root='./data/fmnist', train=True,
+            # Create train set
+            self.train_set = torchvision.datasets.FashionMNIST(root='./data', train=True,
                                                         download=True, transform=transform)
+            if kwargs.get("permutation", False):
+                # Permute if permutation is provided
+                self.train_set = Permutation(torchvision.datasets.FashionMNIST(root='./data', train=True,
+                                                                        download=True, transform=transform),
+                                             kwargs.get("permutation", False), self.target_offset)
+            # Reduce classes if necessary
+            _reduce_class(self.train_set, self.reduce_classes, train=True,
+                          preserve_label_space=kwargs.get("preserve_label_space"))
+            # Remap labels
+            if kwargs.get("labels_remapping", False):
+                labels_remapping = kwargs.get("labels_remapping", False)
+                for lbl_idx in range(len(self.train_set.train_labels)):
+                    self.train_set.train_labels[lbl_idx] = labels_remapping[self.train_set.train_labels[lbl_idx]]
+
             self.train_loader = torch.utils.data.DataLoader(self.train_set, batch_size=self.batch_size,
                                                             shuffle=True, num_workers=self.num_workers,
                                                             pin_memory=pin_memory)
 
-            self.test_set = torchvision.datasets.FashionMNIST(root='./data/fmnist', train=False,
+            # Create test set
+            self.test_set = torchvision.datasets.FashionMNIST(root='./data', train=False,
                                                        download=True, transform=transform)
+            if kwargs.get("permutation", False):
+                # Permute if permutation is provided
+                self.test_set = Permutation(torchvision.datasets.FashionMNIST(root='./data', train=False,
+                                                                        download=True, transform=transform),
+                                             kwargs.get("permutation", False), self.target_offset)
+            # Reduce classes if necessary
+            _reduce_class(self.test_set, self.reduce_classes, train=False,
+                          preserve_label_space=kwargs.get("preserve_label_space"))
+            # Remap labels
+            if kwargs.get("labels_remapping", False):
+                labels_remapping = kwargs.get("labels_remapping", False)
+                for lbl_idx in range(len(self.test_set.test_labels)):
+                    self.test_set.test_labels[lbl_idx] = labels_remapping[self.test_set.test_labels[lbl_idx]]
+
             self.test_loader = torch.utils.data.DataLoader(self.test_set, batch_size=self.batch_size,
                                                            shuffle=False, num_workers=self.num_workers,
                                                            pin_memory=pin_memory)
@@ -880,3 +909,94 @@ def ds_cifar10(**kwargs):
     test_loaders = [ds.test_loader for ds in dataset]
     train_loaders = [ds.train_loader for ds in dataset]
     return train_loaders, test_loaders
+
+
+###########################################################################
+# Added datasets for comparison
+###########################################################################
+def ds_permuted_fmnist(**kwargs):
+    """
+    Permuted fashion MNIST dataset.
+    First task is the fashion MNIST datasets (with 10 possible labels).
+    Other tasks are permutations (pixel-wise) of the fashion MNIST datasets (with 10 possible labels).
+    :param batch_size: batch size
+           num_workers: num of workers
+           pad_to_32: If true, will pad digits to size 32x32 and normalize to zero mean and unit variance.
+           permutations: A list of permutations. Each permutation should be a list containing new pixel position.
+           separate_labels_space: True for seperated labels space - task i labels will be (10*i) to (10*i + 9).
+                                  False for unified labels space - all tasks will have labels of 0 to 9.
+    :return: Tuple with two lists.
+             First list of the tuple is a list of train loaders, each loader is a task.
+             Second list of the tuple is a list of test loaders, each loader is a task.
+    """
+    # First task
+    dataset = [DatasetsLoaders("FashionMNIST", batch_size=kwargs.get("batch_size", 128),
+                               num_workers=kwargs.get("num_workers", 1), pad_to_32=kwargs.get("pad_to_32", False))]
+    target_offset = 0
+    permutations = kwargs.get("permutations", [])
+    for pidx in range(len(permutations)):
+        if kwargs.get("separate_labels_space"):
+            target_offset = (pidx + 1) * 10
+        dataset.append(DatasetsLoaders("FashionMNIST", batch_size=kwargs.get("batch_size", 128),
+                                       num_workers=kwargs.get("num_workers", 1),
+                                       permutation=permutations[pidx], target_offset=target_offset,
+                                       pad_to_32=kwargs.get("pad_to_32", False)))
+    # For offline permuted we take the datasets and mix them.
+    if kwargs.get("offline", False):
+        train_sets = []
+        test_sets = []
+        for ds in dataset:
+            train_sets.append(ds.train_set)
+            test_sets.append(ds.test_set)
+        train_set = torch.utils.data.ConcatDataset(train_sets)
+        test_set = torch.utils.data.ConcatDataset(test_sets)
+        train_loader = torch.utils.data.DataLoader(train_set, batch_size=kwargs.get("batch_size", 128), shuffle=True,
+                                                   num_workers=kwargs.get("num_workers", 1), pin_memory=True)
+        test_loader = torch.utils.data.DataLoader(test_set, batch_size=kwargs.get("batch_size", 128), shuffle=False,
+                                                  num_workers=kwargs.get("num_workers", 1), pin_memory=True)
+        return [train_loader], [test_loader]
+    test_loaders = [ds.test_loader for ds in dataset]
+    train_loaders = [ds.train_loader for ds in dataset]
+    return train_loaders, test_loaders
+
+
+def ds_padded_permuted_fmnist(**kwargs):
+    """
+    Permuted MNIST dataset, padded to 32x32.
+    """
+    return ds_permuted_fmnist(pad_to_32=True, **kwargs)
+
+
+def ds_split_fmnist(**kwargs):
+    """
+    Split fashion MNIST dataset. Consists of 5 tasks: digits 0 & 1, 2 & 3, 4 & 5, 6 & 7, and 8 & 9.
+    :param batch_size: batch size
+           num_workers: num of workers
+           pad_to_32: If true, will pad digits to size 32x32 and normalize to zero mean and unit variance.
+           separate_labels_space: If true, each task will have its own label space (e.g. 01, 23 etc.).
+                                  If false, all tasks will have label space of 0,1 only.
+    :return: Tuple with two lists.
+             First list of the tuple is a list of 5 train loaders, each loader is a task.
+             Second list of the tuple is a list of 5 test loaders, each loader is a task.
+    """
+    classes_lst = [
+        [0, 1],
+        [2, 3],
+        [4, 5],
+        [6, 7],
+        [8, 9]
+    ]
+    dataset = [DatasetsLoaders("FashionMNIST", batch_size=kwargs.get("batch_size", 128),
+                               num_workers=kwargs.get("num_workers", 1),
+                               reduce_classes=cl, pad_to_32=kwargs.get("pad_to_32", False),
+                               preserve_label_space=kwargs.get("separate_labels_space")) for cl in classes_lst]
+    test_loaders = [ds.test_loader for ds in dataset]
+    train_loaders = [ds.train_loader for ds in dataset]
+    return train_loaders, test_loaders
+
+
+def ds_padded_split_fmnist(**kwargs):
+    """
+    Split fashion MNIST dataset, padded to 32x32 pixels.
+    """
+    return ds_split_fmnist(pad_to_32=True, **kwargs)
