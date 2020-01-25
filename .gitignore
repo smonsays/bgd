@@ -19,7 +19,7 @@ tempCodeRunnerFile.py
 
 # Data
 data/
-
+logs/
 
 # Settings
 .vscode/
