@@ -191,11 +191,11 @@ class DatasetsLoaders:
                     [transforms.ToTensor()])
 
             # Create train set
-            self.train_set = torchvision.datasets.MNIST(root='./data', train=True,
+            self.train_set = torchvision.datasets.MNIST(root='./data/mnist', train=True,
                                                         download=True, transform=transform)
             if kwargs.get("permutation", False):
                 # Permute if permutation is provided
-                self.train_set = Permutation(torchvision.datasets.MNIST(root='./data', train=True,
+                self.train_set = Permutation(torchvision.datasets.MNIST(root='./data/mnist', train=True,
                                                                         download=True, transform=transform),
                                              kwargs.get("permutation", False), self.target_offset)
             # Reduce classes if necessary
@@ -212,11 +212,11 @@ class DatasetsLoaders:
                                                             pin_memory=pin_memory)
 
             # Create test set
-            self.test_set = torchvision.datasets.MNIST(root='./data', train=False,
+            self.test_set = torchvision.datasets.MNIST(root='./data/mnist', train=False,
                                                        download=True, transform=transform)
             if kwargs.get("permutation", False):
                 # Permute if permutation is provided
-                self.test_set = Permutation(torchvision.datasets.MNIST(root='./data', train=False,
+                self.test_set = Permutation(torchvision.datasets.MNIST(root='./data/mnist', train=False,
                                                                         download=True, transform=transform),
                                              kwargs.get("permutation", False), self.target_offset)
             # Reduce classes if necessary
@@ -253,11 +253,11 @@ class DatasetsLoaders:
                     [transforms.ToTensor()])
 
             # Create train set
-            self.train_set = torchvision.datasets.FashionMNIST(root='./data', train=True,
+            self.train_set = torchvision.datasets.FashionMNIST(root='./data/fashion_mnist', train=True,
                                                         download=True, transform=transform)
             if kwargs.get("permutation", False):
                 # Permute if permutation is provided
-                self.train_set = Permutation(torchvision.datasets.FashionMNIST(root='./data', train=True,
+                self.train_set = Permutation(torchvision.datasets.FashionMNIST(root='./data/fashion_mnist', train=True,
                                                                         download=True, transform=transform),
                                              kwargs.get("permutation", False), self.target_offset)
             # Reduce classes if necessary
@@ -274,11 +274,11 @@ class DatasetsLoaders:
                                                             pin_memory=pin_memory)
 
             # Create test set
-            self.test_set = torchvision.datasets.FashionMNIST(root='./data', train=False,
+            self.test_set = torchvision.datasets.FashionMNIST(root='./data/fashion_mnist', train=False,
                                                        download=True, transform=transform)
             if kwargs.get("permutation", False):
                 # Permute if permutation is provided
-                self.test_set = Permutation(torchvision.datasets.FashionMNIST(root='./data', train=False,
+                self.test_set = Permutation(torchvision.datasets.FashionMNIST(root='./data/fashion_mnist', train=False,
                                                                         download=True, transform=transform),
                                              kwargs.get("permutation", False), self.target_offset)
             # Reduce classes if necessary
@@ -355,10 +355,10 @@ class DatasetsLoaders:
                  transforms.Normalize(mean=(0.1000,), std=(0.2752,))])
 
             # Original MNIST
-            tasks_datasets = [torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)]
+            tasks_datasets = [torchvision.datasets.MNIST(root='./data/mnist', train=True, download=True, transform=transform)]
             tasks_samples_indices = [torch.tensor(range(len(tasks_datasets[0])), dtype=torch.int32)]
             total_len = len(tasks_datasets[0])
-            test_loaders = [torch.utils.data.DataLoader(torchvision.datasets.MNIST(root='./data', train=False,
+            test_loaders = [torch.utils.data.DataLoader(torchvision.datasets.MNIST(root='./data/mnist', train=False,
                                                                                    download=True, transform=transform),
                                                         batch_size=self.batch_size, shuffle=False,
                                                         num_workers=self.num_workers, pin_memory=pin_memory)]
@@ -369,7 +369,7 @@ class DatasetsLoaders:
                 permutation = all_permutation[p_idx]
 
                 # Add train set:
-                tasks_datasets.append(Permutation(torchvision.datasets.MNIST(root='./data', train=True,
+                tasks_datasets.append(Permutation(torchvision.datasets.MNIST(root='./data/mnist', train=True,
                                                                              download=True, transform=transform),
                                                   permutation, target_offset=0))
 
@@ -378,7 +378,7 @@ class DatasetsLoaders:
                                                                 ), dtype=torch.int32))
                 total_len += len(tasks_datasets[-1])
                 # Add test set:
-                test_set = Permutation(torchvision.datasets.MNIST(root='./data', train=False,
+                test_set = Permutation(torchvision.datasets.MNIST(root='./data/mnist', train=False,
                                                                   download=True, transform=transform),
                                        permutation, self.target_offset)
                 test_loaders.append(torch.utils.data.DataLoader(test_set, batch_size=self.batch_size,
