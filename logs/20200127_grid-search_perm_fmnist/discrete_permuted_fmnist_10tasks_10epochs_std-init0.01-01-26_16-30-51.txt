@@ -1,0 +1,1363 @@
+[2020-01-26 16:30:51 Info] Script args: Namespace(batch_size=128, bw_to_rgb=False, committee_size=0, contpermuted_beta=3, dataset='ds_permuted_fmnist', desc='', inference_aggsoftmax=False, inference_committee=False, inference_initstd=False, inference_map=False, inference_mc=True, init_params=['{"bias_type":', '"xavier",', '"conv_type":', '"xavier",', '"bn_init":', '"01"}'], iterations_per_virtual_epc=468, labels_trick=False, logname='discrete_permuted_fmnist_10tasks_10epochs_std-init0.01', mean_eta=1, nn_arch='mnist_simple_net_200width_domainlearning_784input_10cls_1ds', num_epochs=100, num_of_permutations=9, num_workers=8, optimizer='bgd', optimizer_params='{}', permanent_prune_on_epoch=-1, permanent_prune_on_epoch_percent=90, permute_seed=2019, permuted_offset=False, pruning_percents=[], results_dir='perm_fmnist', seed=2019, separate_labels_space=False, std_init=0.01, test_freq=10, test_mc_iters=10, train_mc_iters=10)
+[2020-01-26 16:30:51 Info] Computer name: lo-a2-049 with pytorch version: 1.0.0
+[2020-01-26 16:30:51 Info] Initialized 0 Conv2d layers using nn.init.xavier_normal_
+[2020-01-26 16:30:51 Info] Initialized 3 linear layers using xavier
+[2020-01-26 16:30:51 Info] Initialized 0 bias conv2d layers using nn.init.xavier.noraml_
+[2020-01-26 16:30:51 Info] Initialized 3 bias linear layers using xavier
+[2020-01-26 16:30:51 Info] Initialized 0 BN layers using weight=1 and bias=0
+[2020-01-26 16:30:51 Info] BGD params: {'mean_eta': 1, 'std_init': 0.01, 'mc_iters': 10}
+[2020-01-26 16:30:51 Info] Inference method: {'test_mc'}
+[2020-01-26 16:30:51 Info] Number of parameters in the model is 199,210
+[2020-01-26 16:30:51 Info] Criterion parameters: type=<class 'torch.nn.modules.loss.CrossEntropyLoss'>
+[2020-01-26 16:30:51 Info] Running training from epoch 1 to epoch 100
+[2020-01-26 16:30:51 Info] Training epoch number 1 with dataset number 0
+[2020-01-26 16:30:58 Info] Epoch 1, train set, Iter 100 current average loss 1.726661443114283 current average acc 0.0%
+[2020-01-26 16:31:04 Info] Epoch 1, train set, Iter 200 current average loss 1.3829481677114983 current average acc 0.0%
+[2020-01-26 16:31:11 Info] Epoch 1, train set, Iter 300 current average loss 1.2020829566121052 current average acc 0.0%
+[2020-01-26 16:31:17 Info] Epoch 1, train set, Iter 400 current average loss 1.0916851112246473 current average acc 0.0%
+[2020-01-26 16:31:21 Info] Stats for train set of size 60000, loss is 1.0341029313913919, acc is 0.0%
+[2020-01-26 16:31:21 Info] Running test set for epoch number 1 for dataset idx 0 using test_mc
+[2020-01-26 16:31:24 Info] Stats for test [test_mc] set of size 10000, loss is 0.7016814417457578, acc is 76.48799999999997%
+[2020-01-26 16:31:24 Info] Running test set for epoch number 1 for dataset idx 1 using test_mc
+[2020-01-26 16:31:27 Info] Stats for test [test_mc] set of size 10000, loss is 2.695762440643308, acc is 15.706000000000005%
+[2020-01-26 16:31:27 Info] Running test set for epoch number 1 for dataset idx 2 using test_mc
+[2020-01-26 16:31:30 Info] Stats for test [test_mc] set of size 10000, loss is 2.982653424568179, acc is 13.98399999999999%
+[2020-01-26 16:31:30 Info] Running test set for epoch number 1 for dataset idx 3 using test_mc
+[2020-01-26 16:31:32 Info] Stats for test [test_mc] set of size 10000, loss is 2.7125664986801152, acc is 16.625999999999955%
+[2020-01-26 16:31:32 Info] Running test set for epoch number 1 for dataset idx 4 using test_mc
+[2020-01-26 16:31:35 Info] Stats for test [test_mc] set of size 10000, loss is 2.757596574554444, acc is 14.705%
+[2020-01-26 16:31:35 Info] Running test set for epoch number 1 for dataset idx 5 using test_mc
+[2020-01-26 16:31:38 Info] Stats for test [test_mc] set of size 10000, loss is 2.6669599033355733, acc is 17.875999999999987%
+[2020-01-26 16:31:38 Info] Running test set for epoch number 1 for dataset idx 6 using test_mc
+[2020-01-26 16:31:41 Info] Stats for test [test_mc] set of size 10000, loss is 2.589277054786682, acc is 16.13999999999997%
+[2020-01-26 16:31:41 Info] Running test set for epoch number 1 for dataset idx 7 using test_mc
+[2020-01-26 16:31:44 Info] Stats for test [test_mc] set of size 10000, loss is 2.7495785227584846, acc is 16.046000000000017%
+[2020-01-26 16:31:44 Info] Running test set for epoch number 1 for dataset idx 8 using test_mc
+[2020-01-26 16:31:46 Info] Stats for test [test_mc] set of size 10000, loss is 2.681574882164, acc is 12.799999999999988%
+[2020-01-26 16:31:46 Info] Running test set for epoch number 1 for dataset idx 9 using test_mc
+[2020-01-26 16:31:49 Info] Stats for test [test_mc] set of size 10000, loss is 2.5053178279495207, acc is 18.092999999999986%
+[2020-01-26 16:31:49 Info] Average accuracy over all tasks for epoch number 1 for dataset idx 9 using test_mc is 21.84639999999998
+[2020-01-26 16:31:49 Info] Finished epoch number 1, Took 57 seconds
+[2020-01-26 16:31:49 Info] Training epoch number 2 with dataset number 0
+[2020-01-26 16:31:56 Info] Epoch 2, train set, Iter 100 current average loss 0.667921998143196 current average acc 0.0%
+[2020-01-26 16:32:02 Info] Epoch 2, train set, Iter 200 current average loss 0.6505690553188331 current average acc 0.0%
+[2020-01-26 16:32:08 Info] Epoch 2, train set, Iter 300 current average loss 0.6385128644605498 current average acc 0.0%
+[2020-01-26 16:32:14 Info] Epoch 2, train set, Iter 400 current average loss 0.6299651130363345 current average acc 0.0%
+[2020-01-26 16:32:19 Info] Stats for train set of size 60000, loss is 0.6221720907592782, acc is 0.0%
+[2020-01-26 16:32:19 Info] Running test set for epoch number 2 for dataset idx 0 using test_mc
+[2020-01-26 16:32:21 Info] Stats for test [test_mc] set of size 10000, loss is 0.6008400803899767, acc is 79.37699999999971%
+[2020-01-26 16:32:21 Info] Running test set for epoch number 2 for dataset idx 1 using test_mc
+[2020-01-26 16:32:24 Info] Stats for test [test_mc] set of size 10000, loss is 3.064675470085143, acc is 16.600999999999996%
+[2020-01-26 16:32:24 Info] Running test set for epoch number 2 for dataset idx 2 using test_mc
+[2020-01-26 16:32:27 Info] Stats for test [test_mc] set of size 10000, loss is 3.29993667388916, acc is 14.611000000000018%
+[2020-01-26 16:32:27 Info] Running test set for epoch number 2 for dataset idx 3 using test_mc
+[2020-01-26 16:32:30 Info] Stats for test [test_mc] set of size 10000, loss is 3.089611239891054, acc is 15.549999999999997%
+[2020-01-26 16:32:30 Info] Running test set for epoch number 2 for dataset idx 4 using test_mc
+[2020-01-26 16:32:33 Info] Stats for test [test_mc] set of size 10000, loss is 3.021834414901733, acc is 14.414000000000017%
+[2020-01-26 16:32:33 Info] Running test set for epoch number 2 for dataset idx 5 using test_mc
+[2020-01-26 16:32:35 Info] Stats for test [test_mc] set of size 10000, loss is 3.0215032582855184, acc is 17.523%
+[2020-01-26 16:32:35 Info] Running test set for epoch number 2 for dataset idx 6 using test_mc
+[2020-01-26 16:32:38 Info] Stats for test [test_mc] set of size 10000, loss is 2.781795900955195, acc is 15.844000000000008%
+[2020-01-26 16:32:38 Info] Running test set for epoch number 2 for dataset idx 7 using test_mc
+[2020-01-26 16:32:41 Info] Stats for test [test_mc] set of size 10000, loss is 3.0764909631729114, acc is 16.50199999999998%
+[2020-01-26 16:32:41 Info] Running test set for epoch number 2 for dataset idx 8 using test_mc
+[2020-01-26 16:32:44 Info] Stats for test [test_mc] set of size 10000, loss is 2.9838917613983096, acc is 13.045000000000002%
+[2020-01-26 16:32:44 Info] Running test set for epoch number 2 for dataset idx 9 using test_mc
+[2020-01-26 16:32:46 Info] Stats for test [test_mc] set of size 10000, loss is 2.8068517893600515, acc is 17.694000000000006%
+[2020-01-26 16:32:46 Info] Average accuracy over all tasks for epoch number 2 for dataset idx 9 using test_mc is 22.116099999999978
+[2020-01-26 16:32:46 Info] Finished epoch number 2, Took 57 seconds
+[2020-01-26 16:32:46 Info] Training epoch number 3 with dataset number 0
+[2020-01-26 16:32:53 Info] Epoch 3, train set, Iter 100 current average loss 0.572768173962831 current average acc 0.0%
+[2020-01-26 16:32:59 Info] Epoch 3, train set, Iter 200 current average loss 0.566028572753073 current average acc 0.0%
+[2020-01-26 16:33:05 Info] Epoch 3, train set, Iter 300 current average loss 0.557584022243817 current average acc 0.0%
+[2020-01-26 16:33:12 Info] Epoch 3, train set, Iter 400 current average loss 0.5522738481387481 current average acc 0.0%
+[2020-01-26 16:33:16 Info] Stats for train set of size 60000, loss is 0.5475289843765911, acc is 0.0%
+[2020-01-26 16:33:16 Info] Finished epoch number 3, Took 29 seconds
+[2020-01-26 16:33:16 Info] Training epoch number 4 with dataset number 0
+[2020-01-26 16:33:22 Info] Epoch 4, train set, Iter 100 current average loss 0.5413378111124053 current average acc 0.0%
+[2020-01-26 16:33:29 Info] Epoch 4, train set, Iter 200 current average loss 0.5254478877633822 current average acc 0.0%
+[2020-01-26 16:33:35 Info] Epoch 4, train set, Iter 300 current average loss 0.5174955902496993 current average acc 0.0%
+[2020-01-26 16:33:41 Info] Epoch 4, train set, Iter 400 current average loss 0.5137204860299825 current average acc 0.0%
+[2020-01-26 16:33:46 Info] Stats for train set of size 60000, loss is 0.5098946806828175, acc is 0.0%
+[2020-01-26 16:33:46 Info] Finished epoch number 4, Took 29 seconds
+[2020-01-26 16:33:46 Info] Training epoch number 5 with dataset number 0
+[2020-01-26 16:33:52 Info] Epoch 5, train set, Iter 100 current average loss 0.49989684930443823 current average acc 0.0%
+[2020-01-26 16:33:58 Info] Epoch 5, train set, Iter 200 current average loss 0.4905671513229609 current average acc 0.0%
+[2020-01-26 16:34:04 Info] Epoch 5, train set, Iter 300 current average loss 0.48921997671325995 current average acc 0.0%
+[2020-01-26 16:34:11 Info] Epoch 5, train set, Iter 400 current average loss 0.48791510260105037 current average acc 0.0%
+[2020-01-26 16:34:15 Info] Stats for train set of size 60000, loss is 0.4856305696423834, acc is 0.0%
+[2020-01-26 16:34:15 Info] Finished epoch number 5, Took 29 seconds
+[2020-01-26 16:34:15 Info] Training epoch number 6 with dataset number 0
+[2020-01-26 16:34:22 Info] Epoch 6, train set, Iter 100 current average loss 0.4663806394934654 current average acc 0.0%
+[2020-01-26 16:34:28 Info] Epoch 6, train set, Iter 200 current average loss 0.47293745177984264 current average acc 0.0%
+[2020-01-26 16:34:34 Info] Epoch 6, train set, Iter 300 current average loss 0.47029878774285355 current average acc 0.0%
+[2020-01-26 16:34:40 Info] Epoch 6, train set, Iter 400 current average loss 0.46954501201957516 current average acc 0.0%
+[2020-01-26 16:34:44 Info] Stats for train set of size 60000, loss is 0.4687467994165425, acc is 0.0%
+[2020-01-26 16:34:44 Info] Finished epoch number 6, Took 29 seconds
+[2020-01-26 16:34:44 Info] Training epoch number 7 with dataset number 0
+[2020-01-26 16:34:51 Info] Epoch 7, train set, Iter 100 current average loss 0.45802443400025367 current average acc 0.0%
+[2020-01-26 16:34:57 Info] Epoch 7, train set, Iter 200 current average loss 0.4604803242683413 current average acc 0.0%
+[2020-01-26 16:35:03 Info] Epoch 7, train set, Iter 300 current average loss 0.46094545931617475 current average acc 0.0%
+[2020-01-26 16:35:10 Info] Epoch 7, train set, Iter 400 current average loss 0.456292351290585 current average acc 0.0%
+[2020-01-26 16:35:14 Info] Stats for train set of size 60000, loss is 0.45475415920257733, acc is 0.0%
+[2020-01-26 16:35:14 Info] Finished epoch number 7, Took 29 seconds
+[2020-01-26 16:35:14 Info] Training epoch number 8 with dataset number 0
+[2020-01-26 16:35:20 Info] Epoch 8, train set, Iter 100 current average loss 0.45271048337221115 current average acc 0.0%
+[2020-01-26 16:35:27 Info] Epoch 8, train set, Iter 200 current average loss 0.4501592181995506 current average acc 0.0%
+[2020-01-26 16:35:33 Info] Epoch 8, train set, Iter 300 current average loss 0.448549450422326 current average acc 0.0%
+[2020-01-26 16:35:39 Info] Epoch 8, train set, Iter 400 current average loss 0.44432252547517337 current average acc 0.0%
+[2020-01-26 16:35:44 Info] Stats for train set of size 60000, loss is 0.4439909392547601, acc is 0.0%
+[2020-01-26 16:35:44 Info] Finished epoch number 8, Took 29 seconds
+[2020-01-26 16:35:44 Info] Training epoch number 9 with dataset number 0
+[2020-01-26 16:35:50 Info] Epoch 9, train set, Iter 100 current average loss 0.4356236485242834 current average acc 0.0%
+[2020-01-26 16:35:56 Info] Epoch 9, train set, Iter 200 current average loss 0.4351385774165386 current average acc 0.0%
+[2020-01-26 16:36:03 Info] Epoch 9, train set, Iter 300 current average loss 0.434959637741248 current average acc 0.0%
+[2020-01-26 16:36:09 Info] Epoch 9, train set, Iter 400 current average loss 0.43574308218061913 current average acc 0.0%
+[2020-01-26 16:36:13 Info] Stats for train set of size 60000, loss is 0.43449138364950884, acc is 0.0%
+[2020-01-26 16:36:13 Info] Running test set for epoch number 9 for dataset idx 0 using test_mc
+[2020-01-26 16:36:16 Info] Stats for test [test_mc] set of size 10000, loss is 0.4649318614721299, acc is 83.7139999999999%
+[2020-01-26 16:36:16 Info] Running test set for epoch number 9 for dataset idx 1 using test_mc
+[2020-01-26 16:36:19 Info] Stats for test [test_mc] set of size 10000, loss is 4.105989608116142, acc is 15.071999999999983%
+[2020-01-26 16:36:19 Info] Running test set for epoch number 9 for dataset idx 2 using test_mc
+[2020-01-26 16:36:21 Info] Stats for test [test_mc] set of size 10000, loss is 4.076109520912169, acc is 15.184000000000006%
+[2020-01-26 16:36:21 Info] Running test set for epoch number 9 for dataset idx 3 using test_mc
+[2020-01-26 16:36:24 Info] Stats for test [test_mc] set of size 10000, loss is 4.0197368902206385, acc is 13.80599999999999%
+[2020-01-26 16:36:24 Info] Running test set for epoch number 9 for dataset idx 4 using test_mc
+[2020-01-26 16:36:27 Info] Stats for test [test_mc] set of size 10000, loss is 3.7083773194503804, acc is 13.355999999999982%
+[2020-01-26 16:36:27 Info] Running test set for epoch number 9 for dataset idx 5 using test_mc
+[2020-01-26 16:36:30 Info] Stats for test [test_mc] set of size 10000, loss is 4.108869309158324, acc is 15.079000000000008%
+[2020-01-26 16:36:30 Info] Running test set for epoch number 9 for dataset idx 6 using test_mc
+[2020-01-26 16:36:33 Info] Stats for test [test_mc] set of size 10000, loss is 3.3606351155853305, acc is 14.437000000000005%
+[2020-01-26 16:36:33 Info] Running test set for epoch number 9 for dataset idx 7 using test_mc
+[2020-01-26 16:36:35 Info] Stats for test [test_mc] set of size 10000, loss is 3.8994810323333735, acc is 14.57699999999999%
+[2020-01-26 16:36:35 Info] Running test set for epoch number 9 for dataset idx 8 using test_mc
+[2020-01-26 16:36:38 Info] Stats for test [test_mc] set of size 10000, loss is 3.716645370521543, acc is 13.74900000000001%
+[2020-01-26 16:36:38 Info] Running test set for epoch number 9 for dataset idx 9 using test_mc
+[2020-01-26 16:36:41 Info] Stats for test [test_mc] set of size 10000, loss is 3.636608440017703, acc is 14.293%
+[2020-01-26 16:36:41 Info] Average accuracy over all tasks for epoch number 9 for dataset idx 9 using test_mc is 21.326699999999985
+[2020-01-26 16:36:41 Info] Finished epoch number 9, Took 57 seconds
+[2020-01-26 16:36:41 Info] Training epoch number 10 with dataset number 0
+[2020-01-26 16:36:47 Info] Epoch 10, train set, Iter 100 current average loss 0.4486014640331273 current average acc 0.0%
+[2020-01-26 16:36:54 Info] Epoch 10, train set, Iter 200 current average loss 0.4333282216489322 current average acc 0.0%
+[2020-01-26 16:37:00 Info] Epoch 10, train set, Iter 300 current average loss 0.42988953267534613 current average acc 0.0%
+[2020-01-26 16:37:06 Info] Epoch 10, train set, Iter 400 current average loss 0.4272006914280359 current average acc 0.0%
+[2020-01-26 16:37:10 Info] Stats for train set of size 60000, loss is 0.4261448923063279, acc is 0.0%
+[2020-01-26 16:37:10 Info] Running test set for epoch number 10 for dataset idx 0 using test_mc
+[2020-01-26 16:37:13 Info] Stats for test [test_mc] set of size 10000, loss is 0.45540201907157873, acc is 84.01399999999994%
+[2020-01-26 16:37:13 Info] Running test set for epoch number 10 for dataset idx 1 using test_mc
+[2020-01-26 16:37:16 Info] Stats for test [test_mc] set of size 10000, loss is 4.087386523399346, acc is 14.989999999999997%
+[2020-01-26 16:37:16 Info] Running test set for epoch number 10 for dataset idx 2 using test_mc
+[2020-01-26 16:37:19 Info] Stats for test [test_mc] set of size 10000, loss is 4.059861246452334, acc is 15.080000000000004%
+[2020-01-26 16:37:19 Info] Running test set for epoch number 10 for dataset idx 3 using test_mc
+[2020-01-26 16:37:21 Info] Stats for test [test_mc] set of size 10000, loss is 4.011474443397525, acc is 13.681000000000024%
+[2020-01-26 16:37:21 Info] Running test set for epoch number 10 for dataset idx 4 using test_mc
+[2020-01-26 16:37:24 Info] Stats for test [test_mc] set of size 10000, loss is 3.7168094514846777, acc is 13.35800000000001%
+[2020-01-26 16:37:24 Info] Running test set for epoch number 10 for dataset idx 5 using test_mc
+[2020-01-26 16:37:27 Info] Stats for test [test_mc] set of size 10000, loss is 4.106097098655698, acc is 14.995999999999986%
+[2020-01-26 16:37:27 Info] Running test set for epoch number 10 for dataset idx 6 using test_mc
+[2020-01-26 16:37:30 Info] Stats for test [test_mc] set of size 10000, loss is 3.353231690292362, acc is 14.526%
+[2020-01-26 16:37:30 Info] Running test set for epoch number 10 for dataset idx 7 using test_mc
+[2020-01-26 16:37:33 Info] Stats for test [test_mc] set of size 10000, loss is 3.9113094327926667, acc is 13.889999999999986%
+[2020-01-26 16:37:33 Info] Running test set for epoch number 10 for dataset idx 8 using test_mc
+[2020-01-26 16:37:35 Info] Stats for test [test_mc] set of size 10000, loss is 3.7221248728942866, acc is 13.015999999999979%
+[2020-01-26 16:37:35 Info] Running test set for epoch number 10 for dataset idx 9 using test_mc
+[2020-01-26 16:37:38 Info] Stats for test [test_mc] set of size 10000, loss is 3.5998080463409408, acc is 14.139999999999988%
+[2020-01-26 16:37:38 Info] Average accuracy over all tasks for epoch number 10 for dataset idx 9 using test_mc is 21.169099999999993
+[2020-01-26 16:37:38 Info] Finished epoch number 10, Took 57 seconds
+[2020-01-26 16:37:38 Info] Training epoch number 11 with dataset number 1
+[2020-01-26 16:37:45 Info] Epoch 11, train set, Iter 100 current average loss 1.1103445052504557 current average acc 0.0%
+[2020-01-26 16:37:51 Info] Epoch 11, train set, Iter 200 current average loss 0.9142829850912084 current average acc 0.0%
+[2020-01-26 16:37:57 Info] Epoch 11, train set, Iter 300 current average loss 0.8292328144609914 current average acc 0.0%
+[2020-01-26 16:38:03 Info] Epoch 11, train set, Iter 400 current average loss 0.7737871105521905 current average acc 0.0%
+[2020-01-26 16:38:08 Info] Stats for train set of size 60000, loss is 0.7459086583201071, acc is 0.0%
+[2020-01-26 16:38:08 Info] Running test set for epoch number 11 for dataset idx 0 using test_mc
+[2020-01-26 16:38:11 Info] Stats for test [test_mc] set of size 10000, loss is 0.5256812986087804, acc is 81.63299999999998%
+[2020-01-26 16:38:11 Info] Running test set for epoch number 11 for dataset idx 1 using test_mc
+[2020-01-26 16:38:13 Info] Stats for test [test_mc] set of size 10000, loss is 0.6075192935800541, acc is 78.1899999999999%
+[2020-01-26 16:38:13 Info] Running test set for epoch number 11 for dataset idx 2 using test_mc
+[2020-01-26 16:38:16 Info] Stats for test [test_mc] set of size 10000, loss is 3.4660876583480853, acc is 15.798000000000002%
+[2020-01-26 16:38:16 Info] Running test set for epoch number 11 for dataset idx 3 using test_mc
+[2020-01-26 16:38:19 Info] Stats for test [test_mc] set of size 10000, loss is 3.601190585670473, acc is 16.58800000000003%
+[2020-01-26 16:38:19 Info] Running test set for epoch number 11 for dataset idx 4 using test_mc
+[2020-01-26 16:38:22 Info] Stats for test [test_mc] set of size 10000, loss is 3.3227815577697712, acc is 14.34199999999999%
+[2020-01-26 16:38:22 Info] Running test set for epoch number 11 for dataset idx 5 using test_mc
+[2020-01-26 16:38:24 Info] Stats for test [test_mc] set of size 10000, loss is 3.439843146514891, acc is 17.622999999999994%
+[2020-01-26 16:38:24 Info] Running test set for epoch number 11 for dataset idx 6 using test_mc
+[2020-01-26 16:38:27 Info] Stats for test [test_mc] set of size 10000, loss is 3.288142267570497, acc is 16.49799999999999%
+[2020-01-26 16:38:27 Info] Running test set for epoch number 11 for dataset idx 7 using test_mc
+[2020-01-26 16:38:30 Info] Stats for test [test_mc] set of size 10000, loss is 3.4027160181808473, acc is 18.299999999999986%
+[2020-01-26 16:38:30 Info] Running test set for epoch number 11 for dataset idx 8 using test_mc
+[2020-01-26 16:38:33 Info] Stats for test [test_mc] set of size 10000, loss is 3.4123834000015263, acc is 15.996000000000015%
+[2020-01-26 16:38:33 Info] Running test set for epoch number 11 for dataset idx 9 using test_mc
+[2020-01-26 16:38:36 Info] Stats for test [test_mc] set of size 10000, loss is 3.0172180568313567, acc is 17.39500000000001%
+[2020-01-26 16:38:36 Info] Average accuracy over all tasks for epoch number 11 for dataset idx 9 using test_mc is 29.236299999999986
+[2020-01-26 16:38:36 Info] Finished epoch number 11, Took 57 seconds
+[2020-01-26 16:38:36 Info] Training epoch number 12 with dataset number 1
+[2020-01-26 16:38:42 Info] Epoch 12, train set, Iter 100 current average loss 0.5661235186159603 current average acc 0.0%
+[2020-01-26 16:38:48 Info] Epoch 12, train set, Iter 200 current average loss 0.5626507764011623 current average acc 0.0%
+[2020-01-26 16:38:55 Info] Epoch 12, train set, Iter 300 current average loss 0.559467790365221 current average acc 0.0%
+[2020-01-26 16:39:01 Info] Epoch 12, train set, Iter 400 current average loss 0.5507554564177991 current average acc 0.0%
+[2020-01-26 16:39:05 Info] Stats for train set of size 60000, loss is 0.5464488278468494, acc is 0.0%
+[2020-01-26 16:39:05 Info] Finished epoch number 12, Took 29 seconds
+[2020-01-26 16:39:05 Info] Training epoch number 13 with dataset number 1
+[2020-01-26 16:39:12 Info] Epoch 13, train set, Iter 100 current average loss 0.5187216130197025 current average acc 0.0%
+[2020-01-26 16:39:18 Info] Epoch 13, train set, Iter 200 current average loss 0.5135463115274903 current average acc 0.0%
+[2020-01-26 16:39:24 Info] Epoch 13, train set, Iter 300 current average loss 0.507471268375713 current average acc 0.0%
+[2020-01-26 16:39:30 Info] Epoch 13, train set, Iter 400 current average loss 0.5055565340816963 current average acc 0.0%
+[2020-01-26 16:39:35 Info] Stats for train set of size 60000, loss is 0.5038290241893134, acc is 0.0%
+[2020-01-26 16:39:35 Info] Finished epoch number 13, Took 29 seconds
+[2020-01-26 16:39:35 Info] Training epoch number 14 with dataset number 1
+[2020-01-26 16:39:41 Info] Epoch 14, train set, Iter 100 current average loss 0.4828447846472258 current average acc 0.0%
+[2020-01-26 16:39:47 Info] Epoch 14, train set, Iter 200 current average loss 0.4835108985006801 current average acc 0.0%
+[2020-01-26 16:39:53 Info] Epoch 14, train set, Iter 300 current average loss 0.48212291202942426 current average acc 0.0%
+[2020-01-26 16:40:00 Info] Epoch 14, train set, Iter 400 current average loss 0.47965165024995676 current average acc 0.0%
+[2020-01-26 16:40:04 Info] Stats for train set of size 60000, loss is 0.47830375264803404, acc is 0.0%
+[2020-01-26 16:40:04 Info] Finished epoch number 14, Took 29 seconds
+[2020-01-26 16:40:04 Info] Training epoch number 15 with dataset number 1
+[2020-01-26 16:40:10 Info] Epoch 15, train set, Iter 100 current average loss 0.4590032286047946 current average acc 0.0%
+[2020-01-26 16:40:17 Info] Epoch 15, train set, Iter 200 current average loss 0.46658045545220556 current average acc 0.0%
+[2020-01-26 16:40:23 Info] Epoch 15, train set, Iter 300 current average loss 0.4644203475912428 current average acc 0.0%
+[2020-01-26 16:40:29 Info] Epoch 15, train set, Iter 400 current average loss 0.4650695023238665 current average acc 0.0%
+[2020-01-26 16:40:34 Info] Stats for train set of size 60000, loss is 0.46083508209387525, acc is 0.0%
+[2020-01-26 16:40:34 Info] Finished epoch number 15, Took 29 seconds
+[2020-01-26 16:40:34 Info] Training epoch number 16 with dataset number 1
+[2020-01-26 16:40:40 Info] Epoch 16, train set, Iter 100 current average loss 0.44443280366063087 current average acc 0.0%
+[2020-01-26 16:40:46 Info] Epoch 16, train set, Iter 200 current average loss 0.4472471517175433 current average acc 0.0%
+[2020-01-26 16:40:53 Info] Epoch 16, train set, Iter 300 current average loss 0.44875713456670424 current average acc 0.0%
+[2020-01-26 16:40:59 Info] Epoch 16, train set, Iter 400 current average loss 0.4484690733551974 current average acc 0.0%
+[2020-01-26 16:41:03 Info] Stats for train set of size 60000, loss is 0.4469536335420616, acc is 0.0%
+[2020-01-26 16:41:03 Info] Finished epoch number 16, Took 29 seconds
+[2020-01-26 16:41:03 Info] Training epoch number 17 with dataset number 1
+[2020-01-26 16:41:10 Info] Epoch 17, train set, Iter 100 current average loss 0.43549449139833485 current average acc 0.0%
+[2020-01-26 16:41:16 Info] Epoch 17, train set, Iter 200 current average loss 0.43962655915319876 current average acc 0.0%
+[2020-01-26 16:41:22 Info] Epoch 17, train set, Iter 300 current average loss 0.4376636431912585 current average acc 0.0%
+[2020-01-26 16:41:29 Info] Epoch 17, train set, Iter 400 current average loss 0.43822262384369987 current average acc 0.0%
+[2020-01-26 16:41:33 Info] Stats for train set of size 60000, loss is 0.4366288401937481, acc is 0.0%
+[2020-01-26 16:41:33 Info] Finished epoch number 17, Took 30 seconds
+[2020-01-26 16:41:33 Info] Training epoch number 18 with dataset number 1
+[2020-01-26 16:41:40 Info] Epoch 18, train set, Iter 100 current average loss 0.4354227879345425 current average acc 0.0%
+[2020-01-26 16:41:46 Info] Epoch 18, train set, Iter 200 current average loss 0.4334054047763344 current average acc 0.0%
+[2020-01-26 16:41:52 Info] Epoch 18, train set, Iter 300 current average loss 0.42771742334961876 current average acc 0.0%
+[2020-01-26 16:41:58 Info] Epoch 18, train set, Iter 400 current average loss 0.42874909501522745 current average acc 0.0%
+[2020-01-26 16:42:02 Info] Stats for train set of size 60000, loss is 0.4271654402573898, acc is 0.0%
+[2020-01-26 16:42:02 Info] Finished epoch number 18, Took 29 seconds
+[2020-01-26 16:42:02 Info] Training epoch number 19 with dataset number 1
+[2020-01-26 16:42:09 Info] Epoch 19, train set, Iter 100 current average loss 0.4131392716765405 current average acc 0.0%
+[2020-01-26 16:42:15 Info] Epoch 19, train set, Iter 200 current average loss 0.41796692292392135 current average acc 0.0%
+[2020-01-26 16:42:21 Info] Epoch 19, train set, Iter 300 current average loss 0.4195227862795185 current average acc 0.0%
+[2020-01-26 16:42:28 Info] Epoch 19, train set, Iter 400 current average loss 0.4193894104212529 current average acc 0.0%
+[2020-01-26 16:42:32 Info] Stats for train set of size 60000, loss is 0.4192704230896642, acc is 0.0%
+[2020-01-26 16:42:32 Info] Running test set for epoch number 19 for dataset idx 0 using test_mc
+[2020-01-26 16:42:35 Info] Stats for test [test_mc] set of size 10000, loss is 0.543009489345551, acc is 80.35099999999996%
+[2020-01-26 16:42:35 Info] Running test set for epoch number 19 for dataset idx 1 using test_mc
+[2020-01-26 16:42:38 Info] Stats for test [test_mc] set of size 10000, loss is 0.45046768912315344, acc is 83.95400000000001%
+[2020-01-26 16:42:38 Info] Running test set for epoch number 19 for dataset idx 2 using test_mc
+[2020-01-26 16:42:40 Info] Stats for test [test_mc] set of size 10000, loss is 4.355813695602414, acc is 14.887000000000002%
+[2020-01-26 16:42:40 Info] Running test set for epoch number 19 for dataset idx 3 using test_mc
+[2020-01-26 16:42:43 Info] Stats for test [test_mc] set of size 10000, loss is 4.827746358184819, acc is 12.941999999999975%
+[2020-01-26 16:42:43 Info] Running test set for epoch number 19 for dataset idx 4 using test_mc
+[2020-01-26 16:42:46 Info] Stats for test [test_mc] set of size 10000, loss is 4.020319909362792, acc is 12.617999999999968%
+[2020-01-26 16:42:46 Info] Running test set for epoch number 19 for dataset idx 5 using test_mc
+[2020-01-26 16:42:49 Info] Stats for test [test_mc] set of size 10000, loss is 4.975315374412537, acc is 14.676999999999994%
+[2020-01-26 16:42:49 Info] Running test set for epoch number 19 for dataset idx 6 using test_mc
+[2020-01-26 16:42:51 Info] Stats for test [test_mc] set of size 10000, loss is 4.075544443588268, acc is 13.58099999999999%
+[2020-01-26 16:42:51 Info] Running test set for epoch number 19 for dataset idx 7 using test_mc
+[2020-01-26 16:42:54 Info] Stats for test [test_mc] set of size 10000, loss is 3.9584555103302, acc is 15.114999999999991%
+[2020-01-26 16:42:54 Info] Running test set for epoch number 19 for dataset idx 8 using test_mc
+[2020-01-26 16:42:57 Info] Stats for test [test_mc] set of size 10000, loss is 4.509252465667722, acc is 13.294999999999995%
+[2020-01-26 16:42:57 Info] Running test set for epoch number 19 for dataset idx 9 using test_mc
+[2020-01-26 16:42:59 Info] Stats for test [test_mc] set of size 10000, loss is 3.8587175957107522, acc is 14.516000000000002%
+[2020-01-26 16:42:59 Info] Average accuracy over all tasks for epoch number 19 for dataset idx 9 using test_mc is 27.593599999999977
+[2020-01-26 16:42:59 Info] Finished epoch number 19, Took 56 seconds
+[2020-01-26 16:42:59 Info] Training epoch number 20 with dataset number 1
+[2020-01-26 16:43:06 Info] Epoch 20, train set, Iter 100 current average loss 0.413584154099226 current average acc 0.0%
+[2020-01-26 16:43:12 Info] Epoch 20, train set, Iter 200 current average loss 0.4121959706246863 current average acc 0.0%
+[2020-01-26 16:43:18 Info] Epoch 20, train set, Iter 300 current average loss 0.41291973074774024 current average acc 0.0%
+[2020-01-26 16:43:25 Info] Epoch 20, train set, Iter 400 current average loss 0.41248477998376015 current average acc 0.0%
+[2020-01-26 16:43:29 Info] Stats for train set of size 60000, loss is 0.41200407292525015, acc is 0.0%
+[2020-01-26 16:43:29 Info] Running test set for epoch number 20 for dataset idx 0 using test_mc
+[2020-01-26 16:43:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.562887228522301, acc is 79.65599999999999%
+[2020-01-26 16:43:32 Info] Running test set for epoch number 20 for dataset idx 1 using test_mc
+[2020-01-26 16:43:34 Info] Stats for test [test_mc] set of size 10000, loss is 0.4501126765251159, acc is 84.03500000000011%
+[2020-01-26 16:43:34 Info] Running test set for epoch number 20 for dataset idx 2 using test_mc
+[2020-01-26 16:43:37 Info] Stats for test [test_mc] set of size 10000, loss is 4.614110960273728, acc is 14.850000000000007%
+[2020-01-26 16:43:37 Info] Running test set for epoch number 20 for dataset idx 3 using test_mc
+[2020-01-26 16:43:40 Info] Stats for test [test_mc] set of size 10000, loss is 5.077047295989982, acc is 12.819999999999979%
+[2020-01-26 16:43:40 Info] Running test set for epoch number 20 for dataset idx 4 using test_mc
+[2020-01-26 16:43:43 Info] Stats for test [test_mc] set of size 10000, loss is 4.214662185134889, acc is 12.726999999999991%
+[2020-01-26 16:43:43 Info] Running test set for epoch number 20 for dataset idx 5 using test_mc
+[2020-01-26 16:43:46 Info] Stats for test [test_mc] set of size 10000, loss is 5.27535611320496, acc is 14.450000000000008%
+[2020-01-26 16:43:46 Info] Running test set for epoch number 20 for dataset idx 6 using test_mc
+[2020-01-26 16:43:48 Info] Stats for test [test_mc] set of size 10000, loss is 4.252842714538573, acc is 13.095000000000011%
+[2020-01-26 16:43:48 Info] Running test set for epoch number 20 for dataset idx 7 using test_mc
+[2020-01-26 16:43:51 Info] Stats for test [test_mc] set of size 10000, loss is 4.107442704391481, acc is 14.888000000000009%
+[2020-01-26 16:43:51 Info] Running test set for epoch number 20 for dataset idx 8 using test_mc
+[2020-01-26 16:43:54 Info] Stats for test [test_mc] set of size 10000, loss is 4.733586214904785, acc is 13.049999999999981%
+[2020-01-26 16:43:54 Info] Running test set for epoch number 20 for dataset idx 9 using test_mc
+[2020-01-26 16:43:57 Info] Stats for test [test_mc] set of size 10000, loss is 4.063328785705564, acc is 14.223000000000003%
+[2020-01-26 16:43:57 Info] Average accuracy over all tasks for epoch number 20 for dataset idx 9 using test_mc is 27.379400000000015
+[2020-01-26 16:43:57 Info] Finished epoch number 20, Took 57 seconds
+[2020-01-26 16:43:57 Info] Training epoch number 21 with dataset number 2
+[2020-01-26 16:44:03 Info] Epoch 21, train set, Iter 100 current average loss 1.1010405504107466 current average acc 0.0%
+[2020-01-26 16:44:09 Info] Epoch 21, train set, Iter 200 current average loss 0.9084595277011364 current average acc 0.0%
+[2020-01-26 16:44:16 Info] Epoch 21, train set, Iter 300 current average loss 0.8175951157708942 current average acc 0.0%
+[2020-01-26 16:44:22 Info] Epoch 21, train set, Iter 400 current average loss 0.7636089023649687 current average acc 0.0%
+[2020-01-26 16:44:26 Info] Stats for train set of size 60000, loss is 0.7375139672247553, acc is 0.0%
+[2020-01-26 16:44:26 Info] Running test set for epoch number 21 for dataset idx 0 using test_mc
+[2020-01-26 16:44:29 Info] Stats for test [test_mc] set of size 10000, loss is 0.5830130319261544, acc is 79.39900000000027%
+[2020-01-26 16:44:29 Info] Running test set for epoch number 21 for dataset idx 1 using test_mc
+[2020-01-26 16:44:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.5047559871292103, acc is 81.899%
+[2020-01-26 16:44:32 Info] Running test set for epoch number 21 for dataset idx 2 using test_mc
+[2020-01-26 16:44:35 Info] Stats for test [test_mc] set of size 10000, loss is 0.5898218163204194, acc is 78.94300000000003%
+[2020-01-26 16:44:35 Info] Running test set for epoch number 21 for dataset idx 3 using test_mc
+[2020-01-26 16:44:37 Info] Stats for test [test_mc] set of size 10000, loss is 4.412659700317389, acc is 12.640999999999988%
+[2020-01-26 16:44:37 Info] Running test set for epoch number 21 for dataset idx 4 using test_mc
+[2020-01-26 16:44:40 Info] Stats for test [test_mc] set of size 10000, loss is 3.5080424193191577, acc is 14.807999999999984%
+[2020-01-26 16:44:40 Info] Running test set for epoch number 21 for dataset idx 5 using test_mc
+[2020-01-26 16:44:43 Info] Stats for test [test_mc] set of size 10000, loss is 4.223477855300898, acc is 14.369000000000005%
+[2020-01-26 16:44:43 Info] Running test set for epoch number 21 for dataset idx 6 using test_mc
+[2020-01-26 16:44:46 Info] Stats for test [test_mc] set of size 10000, loss is 3.6729909208679192, acc is 16.524%
+[2020-01-26 16:44:46 Info] Running test set for epoch number 21 for dataset idx 7 using test_mc
+[2020-01-26 16:44:48 Info] Stats for test [test_mc] set of size 10000, loss is 3.6589301802062972, acc is 12.899000000000012%
+[2020-01-26 16:44:48 Info] Running test set for epoch number 21 for dataset idx 8 using test_mc
+[2020-01-26 16:44:51 Info] Stats for test [test_mc] set of size 10000, loss is 4.07407095378876, acc is 14.269999999999987%
+[2020-01-26 16:44:51 Info] Running test set for epoch number 21 for dataset idx 9 using test_mc
+[2020-01-26 16:44:54 Info] Stats for test [test_mc] set of size 10000, loss is 3.5146669680023166, acc is 15.342000000000017%
+[2020-01-26 16:44:54 Info] Average accuracy over all tasks for epoch number 21 for dataset idx 9 using test_mc is 34.10940000000002
+[2020-01-26 16:44:54 Info] Finished epoch number 21, Took 57 seconds
+[2020-01-26 16:44:54 Info] Training epoch number 22 with dataset number 2
+[2020-01-26 16:45:00 Info] Epoch 22, train set, Iter 100 current average loss 0.5698068961799139 current average acc 0.0%
+[2020-01-26 16:45:07 Info] Epoch 22, train set, Iter 200 current average loss 0.5631571599245074 current average acc 0.0%
+[2020-01-26 16:45:13 Info] Epoch 22, train set, Iter 300 current average loss 0.5522036929229895 current average acc 0.0%
+[2020-01-26 16:45:19 Info] Epoch 22, train set, Iter 400 current average loss 0.5448478166759003 current average acc 0.0%
+[2020-01-26 16:45:23 Info] Stats for train set of size 60000, loss is 0.5414711020231252, acc is 0.0%
+[2020-01-26 16:45:23 Info] Finished epoch number 22, Took 29 seconds
+[2020-01-26 16:45:23 Info] Training epoch number 23 with dataset number 2
+[2020-01-26 16:45:30 Info] Epoch 23, train set, Iter 100 current average loss 0.502373604774476 current average acc 0.0%
+[2020-01-26 16:45:36 Info] Epoch 23, train set, Iter 200 current average loss 0.5037338292300723 current average acc 0.0%
+[2020-01-26 16:45:42 Info] Epoch 23, train set, Iter 300 current average loss 0.503435648202899 current average acc 0.0%
+[2020-01-26 16:45:49 Info] Epoch 23, train set, Iter 400 current average loss 0.5019566003680258 current average acc 0.0%
+[2020-01-26 16:45:53 Info] Stats for train set of size 60000, loss is 0.5002000245443998, acc is 0.0%
+[2020-01-26 16:45:53 Info] Finished epoch number 23, Took 29 seconds
+[2020-01-26 16:45:53 Info] Training epoch number 24 with dataset number 2
+[2020-01-26 16:45:59 Info] Epoch 24, train set, Iter 100 current average loss 0.4708683838099242 current average acc 0.0%
+[2020-01-26 16:46:06 Info] Epoch 24, train set, Iter 200 current average loss 0.4804458233937627 current average acc 0.0%
+[2020-01-26 16:46:12 Info] Epoch 24, train set, Iter 300 current average loss 0.47747272209823194 current average acc 0.0%
+[2020-01-26 16:46:18 Info] Epoch 24, train set, Iter 400 current average loss 0.4765627082176508 current average acc 0.0%
+[2020-01-26 16:46:22 Info] Stats for train set of size 60000, loss is 0.47598679323832144, acc is 0.0%
+[2020-01-26 16:46:22 Info] Finished epoch number 24, Took 29 seconds
+[2020-01-26 16:46:22 Info] Training epoch number 25 with dataset number 2
+[2020-01-26 16:46:29 Info] Epoch 25, train set, Iter 100 current average loss 0.46420319402217813 current average acc 0.0%
+[2020-01-26 16:46:35 Info] Epoch 25, train set, Iter 200 current average loss 0.4588077689409261 current average acc 0.0%
+[2020-01-26 16:46:41 Info] Epoch 25, train set, Iter 300 current average loss 0.45498143031199767 current average acc 0.0%
+[2020-01-26 16:46:48 Info] Epoch 25, train set, Iter 400 current average loss 0.4550440318211924 current average acc 0.0%
+[2020-01-26 16:46:52 Info] Stats for train set of size 60000, loss is 0.4585121366945918, acc is 0.0%
+[2020-01-26 16:46:52 Info] Finished epoch number 25, Took 29 seconds
+[2020-01-26 16:46:52 Info] Training epoch number 26 with dataset number 2
+[2020-01-26 16:46:59 Info] Epoch 26, train set, Iter 100 current average loss 0.45304398077726343 current average acc 0.0%
+[2020-01-26 16:47:05 Info] Epoch 26, train set, Iter 200 current average loss 0.4514827049374576 current average acc 0.0%
+[2020-01-26 16:47:11 Info] Epoch 26, train set, Iter 300 current average loss 0.44506891224781636 current average acc 0.0%
+[2020-01-26 16:47:17 Info] Epoch 26, train set, Iter 400 current average loss 0.4454963575750587 current average acc 0.0%
+[2020-01-26 16:47:21 Info] Stats for train set of size 60000, loss is 0.4456579195706046, acc is 0.0%
+[2020-01-26 16:47:21 Info] Finished epoch number 26, Took 29 seconds
+[2020-01-26 16:47:21 Info] Training epoch number 27 with dataset number 2
+[2020-01-26 16:47:28 Info] Epoch 27, train set, Iter 100 current average loss 0.43651476684212676 current average acc 0.0%
+[2020-01-26 16:47:34 Info] Epoch 27, train set, Iter 200 current average loss 0.4416879808008668 current average acc 0.0%
+[2020-01-26 16:47:41 Info] Epoch 27, train set, Iter 300 current average loss 0.435909266263246 current average acc 0.0%
+[2020-01-26 16:47:47 Info] Epoch 27, train set, Iter 400 current average loss 0.4353536299169057 current average acc 0.0%
+[2020-01-26 16:47:51 Info] Stats for train set of size 60000, loss is 0.43513415933291094, acc is 0.0%
+[2020-01-26 16:47:51 Info] Finished epoch number 27, Took 29 seconds
+[2020-01-26 16:47:51 Info] Training epoch number 28 with dataset number 2
+[2020-01-26 16:47:58 Info] Epoch 28, train set, Iter 100 current average loss 0.4356454630196099 current average acc 0.0%
+[2020-01-26 16:48:04 Info] Epoch 28, train set, Iter 200 current average loss 0.4318533770591017 current average acc 0.0%
+[2020-01-26 16:48:10 Info] Epoch 28, train set, Iter 300 current average loss 0.4309391653140387 current average acc 0.0%
+[2020-01-26 16:48:16 Info] Epoch 28, train set, Iter 400 current average loss 0.4265954678840946 current average acc 0.0%
+[2020-01-26 16:48:21 Info] Stats for train set of size 60000, loss is 0.42577772248586093, acc is 0.0%
+[2020-01-26 16:48:21 Info] Finished epoch number 28, Took 29 seconds
+[2020-01-26 16:48:21 Info] Training epoch number 29 with dataset number 2
+[2020-01-26 16:48:27 Info] Epoch 29, train set, Iter 100 current average loss 0.41943630838394197 current average acc 0.0%
+[2020-01-26 16:48:33 Info] Epoch 29, train set, Iter 200 current average loss 0.42273580844700376 current average acc 0.0%
+[2020-01-26 16:48:40 Info] Epoch 29, train set, Iter 300 current average loss 0.41654817733168675 current average acc 0.0%
+[2020-01-26 16:48:46 Info] Epoch 29, train set, Iter 400 current average loss 0.4180509497299801 current average acc 0.0%
+[2020-01-26 16:48:50 Info] Stats for train set of size 60000, loss is 0.4178968925809861, acc is 0.0%
+[2020-01-26 16:48:50 Info] Running test set for epoch number 29 for dataset idx 0 using test_mc
+[2020-01-26 16:48:53 Info] Stats for test [test_mc] set of size 10000, loss is 0.6623585152578375, acc is 76.70999999999998%
+[2020-01-26 16:48:53 Info] Running test set for epoch number 29 for dataset idx 1 using test_mc
+[2020-01-26 16:48:56 Info] Stats for test [test_mc] set of size 10000, loss is 0.557703250775337, acc is 79.43499999999999%
+[2020-01-26 16:48:56 Info] Running test set for epoch number 29 for dataset idx 2 using test_mc
+[2020-01-26 16:48:59 Info] Stats for test [test_mc] set of size 10000, loss is 0.44626200722694365, acc is 84.05899999999993%
+[2020-01-26 16:48:59 Info] Running test set for epoch number 29 for dataset idx 3 using test_mc
+[2020-01-26 16:49:02 Info] Stats for test [test_mc] set of size 10000, loss is 5.440576378250116, acc is 11.588%
+[2020-01-26 16:49:02 Info] Running test set for epoch number 29 for dataset idx 4 using test_mc
+[2020-01-26 16:49:04 Info] Stats for test [test_mc] set of size 10000, loss is 4.391634497299187, acc is 11.550999999999988%
+[2020-01-26 16:49:04 Info] Running test set for epoch number 29 for dataset idx 5 using test_mc
+[2020-01-26 16:49:07 Info] Stats for test [test_mc] set of size 10000, loss is 5.322734762649539, acc is 12.295000000000012%
+[2020-01-26 16:49:07 Info] Running test set for epoch number 29 for dataset idx 6 using test_mc
+[2020-01-26 16:49:10 Info] Stats for test [test_mc] set of size 10000, loss is 4.159330606346119, acc is 13.85000000000001%
+[2020-01-26 16:49:10 Info] Running test set for epoch number 29 for dataset idx 7 using test_mc
+[2020-01-26 16:49:13 Info] Stats for test [test_mc] set of size 10000, loss is 4.607945462036132, acc is 11.269%
+[2020-01-26 16:49:13 Info] Running test set for epoch number 29 for dataset idx 8 using test_mc
+[2020-01-26 16:49:16 Info] Stats for test [test_mc] set of size 10000, loss is 5.001069591598518, acc is 12.163000000000011%
+[2020-01-26 16:49:16 Info] Running test set for epoch number 29 for dataset idx 9 using test_mc
+[2020-01-26 16:49:18 Info] Stats for test [test_mc] set of size 10000, loss is 4.769541292686475, acc is 13.570000000000002%
+[2020-01-26 16:49:18 Info] Average accuracy over all tasks for epoch number 29 for dataset idx 9 using test_mc is 32.648999999999994
+[2020-01-26 16:49:18 Info] Finished epoch number 29, Took 57 seconds
+[2020-01-26 16:49:18 Info] Training epoch number 30 with dataset number 2
+[2020-01-26 16:49:25 Info] Epoch 30, train set, Iter 100 current average loss 0.4181295171082015 current average acc 0.0%
+[2020-01-26 16:49:31 Info] Epoch 30, train set, Iter 200 current average loss 0.41914558605849617 current average acc 0.0%
+[2020-01-26 16:49:37 Info] Epoch 30, train set, Iter 300 current average loss 0.4143848326404871 current average acc 0.0%
+[2020-01-26 16:49:43 Info] Epoch 30, train set, Iter 400 current average loss 0.41067541774362215 current average acc 0.0%
+[2020-01-26 16:49:48 Info] Stats for train set of size 60000, loss is 0.41096403612454746, acc is 0.0%
+[2020-01-26 16:49:48 Info] Running test set for epoch number 30 for dataset idx 0 using test_mc
+[2020-01-26 16:49:50 Info] Stats for test [test_mc] set of size 10000, loss is 0.6905908829498273, acc is 75.87799999999996%
+[2020-01-26 16:49:50 Info] Running test set for epoch number 30 for dataset idx 1 using test_mc
+[2020-01-26 16:49:53 Info] Stats for test [test_mc] set of size 10000, loss is 0.5590967624855034, acc is 79.41600000000007%
+[2020-01-26 16:49:53 Info] Running test set for epoch number 30 for dataset idx 2 using test_mc
+[2020-01-26 16:49:56 Info] Stats for test [test_mc] set of size 10000, loss is 0.4416398764944072, acc is 84.23100000000008%
+[2020-01-26 16:49:56 Info] Running test set for epoch number 30 for dataset idx 3 using test_mc
+[2020-01-26 16:49:59 Info] Stats for test [test_mc] set of size 10000, loss is 5.620826403808596, acc is 11.90100000000001%
+[2020-01-26 16:49:59 Info] Running test set for epoch number 30 for dataset idx 4 using test_mc
+[2020-01-26 16:50:02 Info] Stats for test [test_mc] set of size 10000, loss is 4.533616859436029, acc is 11.848999999999974%
+[2020-01-26 16:50:02 Info] Running test set for epoch number 30 for dataset idx 5 using test_mc
+[2020-01-26 16:50:05 Info] Stats for test [test_mc] set of size 10000, loss is 5.529633825683612, acc is 12.333999999999982%
+[2020-01-26 16:50:05 Info] Running test set for epoch number 30 for dataset idx 6 using test_mc
+[2020-01-26 16:50:07 Info] Stats for test [test_mc] set of size 10000, loss is 4.273741613311769, acc is 13.411999999999994%
+[2020-01-26 16:50:07 Info] Running test set for epoch number 30 for dataset idx 7 using test_mc
+[2020-01-26 16:50:10 Info] Stats for test [test_mc] set of size 10000, loss is 4.803081234588611, acc is 11.509999999999991%
+[2020-01-26 16:50:10 Info] Running test set for epoch number 30 for dataset idx 8 using test_mc
+[2020-01-26 16:50:13 Info] Stats for test [test_mc] set of size 10000, loss is 5.168181519927978, acc is 12.285999999999994%
+[2020-01-26 16:50:13 Info] Running test set for epoch number 30 for dataset idx 9 using test_mc
+[2020-01-26 16:50:16 Info] Stats for test [test_mc] set of size 10000, loss is 4.936890199279801, acc is 13.353000000000014%
+[2020-01-26 16:50:16 Info] Average accuracy over all tasks for epoch number 30 for dataset idx 9 using test_mc is 32.617000000000004
+[2020-01-26 16:50:16 Info] Finished epoch number 30, Took 57 seconds
+[2020-01-26 16:50:16 Info] Training epoch number 31 with dataset number 3
+[2020-01-26 16:50:22 Info] Epoch 31, train set, Iter 100 current average loss 1.1638336350321763 current average acc 0.0%
+[2020-01-26 16:50:28 Info] Epoch 31, train set, Iter 200 current average loss 0.9432916312515708 current average acc 0.0%
+[2020-01-26 16:50:35 Info] Epoch 31, train set, Iter 300 current average loss 0.8468939854303956 current average acc 0.0%
+[2020-01-26 16:50:41 Info] Epoch 31, train set, Iter 400 current average loss 0.7880650290921308 current average acc 0.0%
+[2020-01-26 16:50:45 Info] Stats for train set of size 60000, loss is 0.758982528228757, acc is 0.0%
+[2020-01-26 16:50:45 Info] Running test set for epoch number 31 for dataset idx 0 using test_mc
+[2020-01-26 16:50:48 Info] Stats for test [test_mc] set of size 10000, loss is 0.7272138809204097, acc is 74.21799999999986%
+[2020-01-26 16:50:48 Info] Running test set for epoch number 31 for dataset idx 1 using test_mc
+[2020-01-26 16:50:51 Info] Stats for test [test_mc] set of size 10000, loss is 0.5969616545438766, acc is 78.58099999999995%
+[2020-01-26 16:50:51 Info] Running test set for epoch number 31 for dataset idx 2 using test_mc
+[2020-01-26 16:50:53 Info] Stats for test [test_mc] set of size 10000, loss is 0.5231435388088213, acc is 81.47699999999989%
+[2020-01-26 16:50:53 Info] Running test set for epoch number 31 for dataset idx 3 using test_mc
+[2020-01-26 16:50:56 Info] Stats for test [test_mc] set of size 10000, loss is 0.5982384459447855, acc is 78.26599999999996%
+[2020-01-26 16:50:56 Info] Running test set for epoch number 31 for dataset idx 4 using test_mc
+[2020-01-26 16:50:59 Info] Stats for test [test_mc] set of size 10000, loss is 3.4314654029464715, acc is 14.403999999999987%
+[2020-01-26 16:50:59 Info] Running test set for epoch number 31 for dataset idx 5 using test_mc
+[2020-01-26 16:51:02 Info] Stats for test [test_mc] set of size 10000, loss is 4.0226513711547875, acc is 11.607999999999988%
+[2020-01-26 16:51:02 Info] Running test set for epoch number 31 for dataset idx 6 using test_mc
+[2020-01-26 16:51:05 Info] Stats for test [test_mc] set of size 10000, loss is 3.6905392929840115, acc is 17.654999999999983%
+[2020-01-26 16:51:05 Info] Running test set for epoch number 31 for dataset idx 7 using test_mc
+[2020-01-26 16:51:07 Info] Stats for test [test_mc] set of size 10000, loss is 3.391301210250851, acc is 15.047999999999986%
+[2020-01-26 16:51:07 Info] Running test set for epoch number 31 for dataset idx 8 using test_mc
+[2020-01-26 16:51:10 Info] Stats for test [test_mc] set of size 10000, loss is 3.7908181451034517, acc is 13.560000000000015%
+[2020-01-26 16:51:10 Info] Running test set for epoch number 31 for dataset idx 9 using test_mc
+[2020-01-26 16:51:13 Info] Stats for test [test_mc] set of size 10000, loss is 3.5778525507354764, acc is 15.203000000000008%
+[2020-01-26 16:51:13 Info] Average accuracy over all tasks for epoch number 31 for dataset idx 9 using test_mc is 40.00199999999997
+[2020-01-26 16:51:13 Info] Finished epoch number 31, Took 57 seconds
+[2020-01-26 16:51:13 Info] Training epoch number 32 with dataset number 3
+[2020-01-26 16:51:20 Info] Epoch 32, train set, Iter 100 current average loss 0.5583984741568565 current average acc 0.0%
+[2020-01-26 16:51:26 Info] Epoch 32, train set, Iter 200 current average loss 0.5569524202942865 current average acc 0.0%
+[2020-01-26 16:51:32 Info] Epoch 32, train set, Iter 300 current average loss 0.5519548743168537 current average acc 0.0%
+[2020-01-26 16:51:38 Info] Epoch 32, train set, Iter 400 current average loss 0.5433982250541453 current average acc 0.0%
+[2020-01-26 16:51:42 Info] Stats for train set of size 60000, loss is 0.5395550837516794, acc is 0.0%
+[2020-01-26 16:51:42 Info] Finished epoch number 32, Took 29 seconds
+[2020-01-26 16:51:42 Info] Training epoch number 33 with dataset number 3
+[2020-01-26 16:51:49 Info] Epoch 33, train set, Iter 100 current average loss 0.5221209377050403 current average acc 0.0%
+[2020-01-26 16:51:55 Info] Epoch 33, train set, Iter 200 current average loss 0.5103578060120352 current average acc 0.0%
+[2020-01-26 16:52:01 Info] Epoch 33, train set, Iter 300 current average loss 0.5045665141145399 current average acc 0.0%
+[2020-01-26 16:52:08 Info] Epoch 33, train set, Iter 400 current average loss 0.5008368395343434 current average acc 0.0%
+[2020-01-26 16:52:12 Info] Stats for train set of size 60000, loss is 0.4979532454903919, acc is 0.0%
+[2020-01-26 16:52:12 Info] Finished epoch number 33, Took 29 seconds
+[2020-01-26 16:52:12 Info] Training epoch number 34 with dataset number 3
+[2020-01-26 16:52:18 Info] Epoch 34, train set, Iter 100 current average loss 0.47924625611305255 current average acc 0.0%
+[2020-01-26 16:52:25 Info] Epoch 34, train set, Iter 200 current average loss 0.4811288683861489 current average acc 0.0%
+[2020-01-26 16:52:31 Info] Epoch 34, train set, Iter 300 current average loss 0.4768001751005651 current average acc 0.0%
+[2020-01-26 16:52:37 Info] Epoch 34, train set, Iter 400 current average loss 0.4764368036761884 current average acc 0.0%
+[2020-01-26 16:52:42 Info] Stats for train set of size 60000, loss is 0.47370981418768626, acc is 0.0%
+[2020-01-26 16:52:42 Info] Finished epoch number 34, Took 29 seconds
+[2020-01-26 16:52:42 Info] Training epoch number 35 with dataset number 3
+[2020-01-26 16:52:48 Info] Epoch 35, train set, Iter 100 current average loss 0.4636703954935068 current average acc 0.0%
+[2020-01-26 16:52:55 Info] Epoch 35, train set, Iter 200 current average loss 0.46549122929573095 current average acc 0.0%
+[2020-01-26 16:53:01 Info] Epoch 35, train set, Iter 300 current average loss 0.4602271740436562 current average acc 0.0%
+[2020-01-26 16:53:07 Info] Epoch 35, train set, Iter 400 current average loss 0.45906629581749586 current average acc 0.0%
+[2020-01-26 16:53:11 Info] Stats for train set of size 60000, loss is 0.45701311401367295, acc is 0.0%
+[2020-01-26 16:53:11 Info] Finished epoch number 35, Took 29 seconds
+[2020-01-26 16:53:11 Info] Training epoch number 36 with dataset number 3
+[2020-01-26 16:53:18 Info] Epoch 36, train set, Iter 100 current average loss 0.44685863709449786 current average acc 0.0%
+[2020-01-26 16:53:24 Info] Epoch 36, train set, Iter 200 current average loss 0.45076232278347117 current average acc 0.0%
+[2020-01-26 16:53:30 Info] Epoch 36, train set, Iter 300 current average loss 0.445183936595918 current average acc 0.0%
+[2020-01-26 16:53:36 Info] Epoch 36, train set, Iter 400 current average loss 0.44719235091656523 current average acc 0.0%
+[2020-01-26 16:53:41 Info] Stats for train set of size 60000, loss is 0.4442966392501203, acc is 0.0%
+[2020-01-26 16:53:41 Info] Finished epoch number 36, Took 29 seconds
+[2020-01-26 16:53:41 Info] Training epoch number 37 with dataset number 3
+[2020-01-26 16:53:47 Info] Epoch 37, train set, Iter 100 current average loss 0.4294002712965015 current average acc 0.0%
+[2020-01-26 16:53:53 Info] Epoch 37, train set, Iter 200 current average loss 0.4303597923815241 current average acc 0.0%
+[2020-01-26 16:54:00 Info] Epoch 37, train set, Iter 300 current average loss 0.43432728830973144 current average acc 0.0%
+[2020-01-26 16:54:06 Info] Epoch 37, train set, Iter 400 current average loss 0.4339916701540343 current average acc 0.0%
+[2020-01-26 16:54:10 Info] Stats for train set of size 60000, loss is 0.4329375235128397, acc is 0.0%
+[2020-01-26 16:54:10 Info] Finished epoch number 37, Took 29 seconds
+[2020-01-26 16:54:10 Info] Training epoch number 38 with dataset number 3
+[2020-01-26 16:54:16 Info] Epoch 38, train set, Iter 100 current average loss 0.42573369234800346 current average acc 0.0%
+[2020-01-26 16:54:23 Info] Epoch 38, train set, Iter 200 current average loss 0.42347237105667557 current average acc 0.0%
+[2020-01-26 16:54:29 Info] Epoch 38, train set, Iter 300 current average loss 0.4252468469540273 current average acc 0.0%
+[2020-01-26 16:54:35 Info] Epoch 38, train set, Iter 400 current average loss 0.42645859029143945 current average acc 0.0%
+[2020-01-26 16:54:40 Info] Stats for train set of size 60000, loss is 0.4243519970099112, acc is 0.0%
+[2020-01-26 16:54:40 Info] Finished epoch number 38, Took 29 seconds
+[2020-01-26 16:54:40 Info] Training epoch number 39 with dataset number 3
+[2020-01-26 16:54:45 Info] Epoch 39, train set, Iter 100 current average loss 0.4119811580181118 current average acc 0.0%
+[2020-01-26 16:54:52 Info] Epoch 39, train set, Iter 200 current average loss 0.41645992951095134 current average acc 0.0%
+[2020-01-26 16:54:58 Info] Epoch 39, train set, Iter 300 current average loss 0.4193420793215439 current average acc 0.0%
+[2020-01-26 16:55:04 Info] Epoch 39, train set, Iter 400 current average loss 0.41886676262691697 current average acc 0.0%
+[2020-01-26 16:55:09 Info] Stats for train set of size 60000, loss is 0.4171865507109978, acc is 0.0%
+[2020-01-26 16:55:09 Info] Running test set for epoch number 39 for dataset idx 0 using test_mc
+[2020-01-26 16:55:11 Info] Stats for test [test_mc] set of size 10000, loss is 0.8213374577999119, acc is 72.36699999999993%
+[2020-01-26 16:55:11 Info] Running test set for epoch number 39 for dataset idx 1 using test_mc
+[2020-01-26 16:55:14 Info] Stats for test [test_mc] set of size 10000, loss is 0.7295687656593342, acc is 74.00699999999983%
+[2020-01-26 16:55:14 Info] Running test set for epoch number 39 for dataset idx 2 using test_mc
+[2020-01-26 16:55:17 Info] Stats for test [test_mc] set of size 10000, loss is 0.5943443178367616, acc is 78.65100000000017%
+[2020-01-26 16:55:17 Info] Running test set for epoch number 39 for dataset idx 3 using test_mc
+[2020-01-26 16:55:20 Info] Stats for test [test_mc] set of size 10000, loss is 0.4545939545202256, acc is 83.9389999999998%
+[2020-01-26 16:55:20 Info] Running test set for epoch number 39 for dataset idx 4 using test_mc
+[2020-01-26 16:55:22 Info] Stats for test [test_mc] set of size 10000, loss is 4.3292603118133535, acc is 7.997999999999989%
+[2020-01-26 16:55:22 Info] Running test set for epoch number 39 for dataset idx 5 using test_mc
+[2020-01-26 16:55:25 Info] Stats for test [test_mc] set of size 10000, loss is 5.281159669036858, acc is 10.993000000000013%
+[2020-01-26 16:55:25 Info] Running test set for epoch number 39 for dataset idx 6 using test_mc
+[2020-01-26 16:55:28 Info] Stats for test [test_mc] set of size 10000, loss is 4.5123204492950535, acc is 11.32600000000002%
+[2020-01-26 16:55:28 Info] Running test set for epoch number 39 for dataset idx 7 using test_mc
+[2020-01-26 16:55:31 Info] Stats for test [test_mc] set of size 10000, loss is 4.323386496429429, acc is 12.273000000000003%
+[2020-01-26 16:55:31 Info] Running test set for epoch number 39 for dataset idx 8 using test_mc
+[2020-01-26 16:55:34 Info] Stats for test [test_mc] set of size 10000, loss is 4.511941268005384, acc is 11.241999999999999%
+[2020-01-26 16:55:34 Info] Running test set for epoch number 39 for dataset idx 9 using test_mc
+[2020-01-26 16:55:36 Info] Stats for test [test_mc] set of size 10000, loss is 4.316423629875184, acc is 12.405999999999997%
+[2020-01-26 16:55:36 Info] Average accuracy over all tasks for epoch number 39 for dataset idx 9 using test_mc is 37.520199999999974
+[2020-01-26 16:55:36 Info] Finished epoch number 39, Took 56 seconds
+[2020-01-26 16:55:36 Info] Training epoch number 40 with dataset number 3
+[2020-01-26 16:55:43 Info] Epoch 40, train set, Iter 100 current average loss 0.4062300354987381 current average acc 0.0%
+[2020-01-26 16:55:49 Info] Epoch 40, train set, Iter 200 current average loss 0.4045854990035291 current average acc 0.0%
+[2020-01-26 16:55:55 Info] Epoch 40, train set, Iter 300 current average loss 0.4119111012220383 current average acc 0.0%
+[2020-01-26 16:56:02 Info] Epoch 40, train set, Iter 400 current average loss 0.4096559164449574 current average acc 0.0%
+[2020-01-26 16:56:06 Info] Stats for train set of size 60000, loss is 0.4101185079161332, acc is 0.0%
+[2020-01-26 16:56:06 Info] Running test set for epoch number 40 for dataset idx 0 using test_mc
+[2020-01-26 16:56:09 Info] Stats for test [test_mc] set of size 10000, loss is 0.8181207909774783, acc is 71.7969999999999%
+[2020-01-26 16:56:09 Info] Running test set for epoch number 40 for dataset idx 1 using test_mc
+[2020-01-26 16:56:12 Info] Stats for test [test_mc] set of size 10000, loss is 0.7559899669170389, acc is 73.36599999999991%
+[2020-01-26 16:56:12 Info] Running test set for epoch number 40 for dataset idx 2 using test_mc
+[2020-01-26 16:56:14 Info] Stats for test [test_mc] set of size 10000, loss is 0.5992707571744917, acc is 78.20099999999991%
+[2020-01-26 16:56:14 Info] Running test set for epoch number 40 for dataset idx 3 using test_mc
+[2020-01-26 16:56:17 Info] Stats for test [test_mc] set of size 10000, loss is 0.44535895657062513, acc is 84.17999999999998%
+[2020-01-26 16:56:17 Info] Running test set for epoch number 40 for dataset idx 4 using test_mc
+[2020-01-26 16:56:20 Info] Stats for test [test_mc] set of size 10000, loss is 4.382695860900881, acc is 7.751999999999993%
+[2020-01-26 16:56:20 Info] Running test set for epoch number 40 for dataset idx 5 using test_mc
+[2020-01-26 16:56:23 Info] Stats for test [test_mc] set of size 10000, loss is 5.373615252304087, acc is 10.605999999999995%
+[2020-01-26 16:56:23 Info] Running test set for epoch number 40 for dataset idx 6 using test_mc
+[2020-01-26 16:56:25 Info] Stats for test [test_mc] set of size 10000, loss is 4.532687772445682, acc is 10.852999999999989%
+[2020-01-26 16:56:25 Info] Running test set for epoch number 40 for dataset idx 7 using test_mc
+[2020-01-26 16:56:28 Info] Stats for test [test_mc] set of size 10000, loss is 4.27727425086975, acc is 12.217000000000015%
+[2020-01-26 16:56:28 Info] Running test set for epoch number 40 for dataset idx 8 using test_mc
+[2020-01-26 16:56:31 Info] Stats for test [test_mc] set of size 10000, loss is 4.529167747344977, acc is 10.904999999999998%
+[2020-01-26 16:56:31 Info] Running test set for epoch number 40 for dataset idx 9 using test_mc
+[2020-01-26 16:56:34 Info] Stats for test [test_mc] set of size 10000, loss is 4.326414893417352, acc is 11.971999999999994%
+[2020-01-26 16:56:34 Info] Average accuracy over all tasks for epoch number 40 for dataset idx 9 using test_mc is 37.184899999999956
+[2020-01-26 16:56:34 Info] Finished epoch number 40, Took 57 seconds
+[2020-01-26 16:56:34 Info] Training epoch number 41 with dataset number 4
+[2020-01-26 16:56:40 Info] Epoch 41, train set, Iter 100 current average loss 1.077225190043448 current average acc 0.0%
+[2020-01-26 16:56:46 Info] Epoch 41, train set, Iter 200 current average loss 0.8902180046439163 current average acc 0.0%
+[2020-01-26 16:56:53 Info] Epoch 41, train set, Iter 300 current average loss 0.8004889040887336 current average acc 0.0%
+[2020-01-26 16:56:59 Info] Epoch 41, train set, Iter 400 current average loss 0.7517471349611891 current average acc 0.0%
+[2020-01-26 16:57:03 Info] Stats for train set of size 60000, loss is 0.7281292235628781, acc is 0.0%
+[2020-01-26 16:57:03 Info] Running test set for epoch number 41 for dataset idx 0 using test_mc
+[2020-01-26 16:57:06 Info] Stats for test [test_mc] set of size 10000, loss is 0.9040822617292408, acc is 69.75999999999999%
+[2020-01-26 16:57:06 Info] Running test set for epoch number 41 for dataset idx 1 using test_mc
+[2020-01-26 16:57:09 Info] Stats for test [test_mc] set of size 10000, loss is 0.8660162292861944, acc is 68.29299999999981%
+[2020-01-26 16:57:09 Info] Running test set for epoch number 41 for dataset idx 2 using test_mc
+[2020-01-26 16:57:11 Info] Stats for test [test_mc] set of size 10000, loss is 0.7251708049011235, acc is 71.37099999999988%
+[2020-01-26 16:57:11 Info] Running test set for epoch number 41 for dataset idx 3 using test_mc
+[2020-01-26 16:57:14 Info] Stats for test [test_mc] set of size 10000, loss is 0.4929352542972558, acc is 82.57500000000012%
+[2020-01-26 16:57:14 Info] Running test set for epoch number 41 for dataset idx 4 using test_mc
+[2020-01-26 16:57:17 Info] Stats for test [test_mc] set of size 10000, loss is 0.5885069294309618, acc is 78.97399999999968%
+[2020-01-26 16:57:17 Info] Running test set for epoch number 41 for dataset idx 5 using test_mc
+[2020-01-26 16:57:20 Info] Stats for test [test_mc] set of size 10000, loss is 4.110688185462958, acc is 13.50999999999999%
+[2020-01-26 16:57:20 Info] Running test set for epoch number 41 for dataset idx 6 using test_mc
+[2020-01-26 16:57:23 Info] Stats for test [test_mc] set of size 10000, loss is 4.384405547561644, acc is 13.194999999999988%
+[2020-01-26 16:57:23 Info] Running test set for epoch number 41 for dataset idx 7 using test_mc
+[2020-01-26 16:57:25 Info] Stats for test [test_mc] set of size 10000, loss is 4.127367505645758, acc is 17.158999999999985%
+[2020-01-26 16:57:25 Info] Running test set for epoch number 41 for dataset idx 8 using test_mc
+[2020-01-26 16:57:28 Info] Stats for test [test_mc] set of size 10000, loss is 3.9123912653732282, acc is 11.890999999999996%
+[2020-01-26 16:57:28 Info] Running test set for epoch number 41 for dataset idx 9 using test_mc
+[2020-01-26 16:57:31 Info] Stats for test [test_mc] set of size 10000, loss is 3.8613823125076268, acc is 16.307999999999996%
+[2020-01-26 16:57:31 Info] Average accuracy over all tasks for epoch number 41 for dataset idx 9 using test_mc is 44.30359999999995
+[2020-01-26 16:57:31 Info] Finished epoch number 41, Took 57 seconds
+[2020-01-26 16:57:31 Info] Training epoch number 42 with dataset number 4
+[2020-01-26 16:57:37 Info] Epoch 42, train set, Iter 100 current average loss 0.5463748131096365 current average acc 0.0%
+[2020-01-26 16:57:43 Info] Epoch 42, train set, Iter 200 current average loss 0.5489305394440906 current average acc 0.0%
+[2020-01-26 16:57:50 Info] Epoch 42, train set, Iter 300 current average loss 0.5421400229831541 current average acc 0.0%
+[2020-01-26 16:57:56 Info] Epoch 42, train set, Iter 400 current average loss 0.5365399033352706 current average acc 0.0%
+[2020-01-26 16:58:00 Info] Stats for train set of size 60000, loss is 0.5339811477422687, acc is 0.0%
+[2020-01-26 16:58:00 Info] Finished epoch number 42, Took 29 seconds
+[2020-01-26 16:58:00 Info] Training epoch number 43 with dataset number 4
+[2020-01-26 16:58:07 Info] Epoch 43, train set, Iter 100 current average loss 0.5012888955175908 current average acc 0.0%
+[2020-01-26 16:58:13 Info] Epoch 43, train set, Iter 200 current average loss 0.5007343994677076 current average acc 0.0%
+[2020-01-26 16:58:19 Info] Epoch 43, train set, Iter 300 current average loss 0.500489970366162 current average acc 0.0%
+[2020-01-26 16:58:26 Info] Epoch 43, train set, Iter 400 current average loss 0.49716191788017966 current average acc 0.0%
+[2020-01-26 16:58:30 Info] Stats for train set of size 60000, loss is 0.4935126049264291, acc is 0.0%
+[2020-01-26 16:58:30 Info] Finished epoch number 43, Took 29 seconds
+[2020-01-26 16:58:30 Info] Training epoch number 44 with dataset number 4
+[2020-01-26 16:58:36 Info] Epoch 44, train set, Iter 100 current average loss 0.4769549022912978 current average acc 0.0%
+[2020-01-26 16:58:43 Info] Epoch 44, train set, Iter 200 current average loss 0.4717947626560928 current average acc 0.0%
+[2020-01-26 16:58:49 Info] Epoch 44, train set, Iter 300 current average loss 0.47510581505298616 current average acc 0.0%
+[2020-01-26 16:58:55 Info] Epoch 44, train set, Iter 400 current average loss 0.47121012841164966 current average acc 0.0%
+[2020-01-26 16:59:00 Info] Stats for train set of size 60000, loss is 0.4702705019791912, acc is 0.0%
+[2020-01-26 16:59:00 Info] Finished epoch number 44, Took 29 seconds
+[2020-01-26 16:59:00 Info] Training epoch number 45 with dataset number 4
+[2020-01-26 16:59:06 Info] Epoch 45, train set, Iter 100 current average loss 0.46529618406295803 current average acc 0.0%
+[2020-01-26 16:59:12 Info] Epoch 45, train set, Iter 200 current average loss 0.4604428029656415 current average acc 0.0%
+[2020-01-26 16:59:19 Info] Epoch 45, train set, Iter 300 current average loss 0.45747013516227425 current average acc 0.0%
+[2020-01-26 16:59:25 Info] Epoch 45, train set, Iter 400 current average loss 0.4539799719937147 current average acc 0.0%
+[2020-01-26 16:59:29 Info] Stats for train set of size 60000, loss is 0.4529761944182713, acc is 0.0%
+[2020-01-26 16:59:29 Info] Finished epoch number 45, Took 29 seconds
+[2020-01-26 16:59:29 Info] Training epoch number 46 with dataset number 4
+[2020-01-26 16:59:36 Info] Epoch 46, train set, Iter 100 current average loss 0.44777747780084703 current average acc 0.0%
+[2020-01-26 16:59:42 Info] Epoch 46, train set, Iter 200 current average loss 0.4439966620877384 current average acc 0.0%
+[2020-01-26 16:59:48 Info] Epoch 46, train set, Iter 300 current average loss 0.4407047077566389 current average acc 0.0%
+[2020-01-26 16:59:54 Info] Epoch 46, train set, Iter 400 current average loss 0.44039307371899494 current average acc 0.0%
+[2020-01-26 16:59:59 Info] Stats for train set of size 60000, loss is 0.44036849684874285, acc is 0.0%
+[2020-01-26 16:59:59 Info] Finished epoch number 46, Took 29 seconds
+[2020-01-26 16:59:59 Info] Training epoch number 47 with dataset number 4
+[2020-01-26 17:00:05 Info] Epoch 47, train set, Iter 100 current average loss 0.43975059917569187 current average acc 0.0%
+[2020-01-26 17:00:11 Info] Epoch 47, train set, Iter 200 current average loss 0.43369316785037626 current average acc 0.0%
+[2020-01-26 17:00:17 Info] Epoch 47, train set, Iter 300 current average loss 0.43222919173041974 current average acc 0.0%
+[2020-01-26 17:00:24 Info] Epoch 47, train set, Iter 400 current average loss 0.4301170644015076 current average acc 0.0%
+[2020-01-26 17:00:28 Info] Stats for train set of size 60000, loss is 0.4303236700359988, acc is 0.0%
+[2020-01-26 17:00:28 Info] Finished epoch number 47, Took 29 seconds
+[2020-01-26 17:00:28 Info] Training epoch number 48 with dataset number 4
+[2020-01-26 17:00:34 Info] Epoch 48, train set, Iter 100 current average loss 0.4218946645706898 current average acc 0.0%
+[2020-01-26 17:00:40 Info] Epoch 48, train set, Iter 200 current average loss 0.41983775343746055 current average acc 0.0%
+[2020-01-26 17:00:47 Info] Epoch 48, train set, Iter 300 current average loss 0.421899895444511 current average acc 0.0%
+[2020-01-26 17:00:53 Info] Epoch 48, train set, Iter 400 current average loss 0.4206687461845563 current average acc 0.0%
+[2020-01-26 17:00:57 Info] Stats for train set of size 60000, loss is 0.4210270568672804, acc is 0.0%
+[2020-01-26 17:00:57 Info] Finished epoch number 48, Took 29 seconds
+[2020-01-26 17:00:57 Info] Training epoch number 49 with dataset number 4
+[2020-01-26 17:01:03 Info] Epoch 49, train set, Iter 100 current average loss 0.4035789167135953 current average acc 0.0%
+[2020-01-26 17:01:10 Info] Epoch 49, train set, Iter 200 current average loss 0.4119529140070071 current average acc 0.0%
+[2020-01-26 17:01:16 Info] Epoch 49, train set, Iter 300 current average loss 0.41034471053381794 current average acc 0.0%
+[2020-01-26 17:01:22 Info] Epoch 49, train set, Iter 400 current average loss 0.4139179916270072 current average acc 0.0%
+[2020-01-26 17:01:26 Info] Stats for train set of size 60000, loss is 0.41312745312213783, acc is 0.0%
+[2020-01-26 17:01:26 Info] Running test set for epoch number 49 for dataset idx 0 using test_mc
+[2020-01-26 17:01:29 Info] Stats for test [test_mc] set of size 10000, loss is 1.0418653780841851, acc is 67.18499999999995%
+[2020-01-26 17:01:29 Info] Running test set for epoch number 49 for dataset idx 1 using test_mc
+[2020-01-26 17:01:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.9325842453575136, acc is 65.41799999999999%
+[2020-01-26 17:01:32 Info] Running test set for epoch number 49 for dataset idx 2 using test_mc
+[2020-01-26 17:01:35 Info] Stats for test [test_mc] set of size 10000, loss is 0.7660315011882777, acc is 70.3249999999999%
+[2020-01-26 17:01:35 Info] Running test set for epoch number 49 for dataset idx 3 using test_mc
+[2020-01-26 17:01:38 Info] Stats for test [test_mc] set of size 10000, loss is 0.5301818612289448, acc is 80.55399999999999%
+[2020-01-26 17:01:38 Info] Running test set for epoch number 49 for dataset idx 4 using test_mc
+[2020-01-26 17:01:40 Info] Stats for test [test_mc] set of size 10000, loss is 0.44474852517128016, acc is 84.06600000000002%
+[2020-01-26 17:01:40 Info] Running test set for epoch number 49 for dataset idx 5 using test_mc
+[2020-01-26 17:01:44 Info] Stats for test [test_mc] set of size 10000, loss is 4.801845541954033, acc is 12.640000000000002%
+[2020-01-26 17:01:44 Info] Running test set for epoch number 49 for dataset idx 6 using test_mc
+[2020-01-26 17:01:47 Info] Stats for test [test_mc] set of size 10000, loss is 5.1681277462005575, acc is 10.312000000000019%
+[2020-01-26 17:01:47 Info] Running test set for epoch number 49 for dataset idx 7 using test_mc
+[2020-01-26 17:01:49 Info] Stats for test [test_mc] set of size 10000, loss is 4.869393095321649, acc is 14.249999999999991%
+[2020-01-26 17:01:49 Info] Running test set for epoch number 49 for dataset idx 8 using test_mc
+[2020-01-26 17:01:52 Info] Stats for test [test_mc] set of size 10000, loss is 4.673708815460213, acc is 11.248999999999993%
+[2020-01-26 17:01:52 Info] Running test set for epoch number 49 for dataset idx 9 using test_mc
+[2020-01-26 17:01:55 Info] Stats for test [test_mc] set of size 10000, loss is 4.425452130775449, acc is 15.26999999999999%
+[2020-01-26 17:01:55 Info] Average accuracy over all tasks for epoch number 49 for dataset idx 9 using test_mc is 43.126899999999985
+[2020-01-26 17:01:55 Info] Finished epoch number 49, Took 57 seconds
+[2020-01-26 17:01:55 Info] Training epoch number 50 with dataset number 4
+[2020-01-26 17:02:01 Info] Epoch 50, train set, Iter 100 current average loss 0.42427746841311403 current average acc 0.0%
+[2020-01-26 17:02:07 Info] Epoch 50, train set, Iter 200 current average loss 0.4121939183697096 current average acc 0.0%
+[2020-01-26 17:02:13 Info] Epoch 50, train set, Iter 300 current average loss 0.40812333541115126 current average acc 0.0%
+[2020-01-26 17:02:20 Info] Epoch 50, train set, Iter 400 current average loss 0.4048209866248076 current average acc 0.0%
+[2020-01-26 17:02:24 Info] Stats for train set of size 60000, loss is 0.4068066580454512, acc is 0.0%
+[2020-01-26 17:02:24 Info] Running test set for epoch number 50 for dataset idx 0 using test_mc
+[2020-01-26 17:02:27 Info] Stats for test [test_mc] set of size 10000, loss is 1.0070450555610684, acc is 67.28699999999999%
+[2020-01-26 17:02:27 Info] Running test set for epoch number 50 for dataset idx 1 using test_mc
+[2020-01-26 17:02:29 Info] Stats for test [test_mc] set of size 10000, loss is 1.0370319215965262, acc is 62.0679999999999%
+[2020-01-26 17:02:29 Info] Running test set for epoch number 50 for dataset idx 2 using test_mc
+[2020-01-26 17:02:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.8022048983430865, acc is 68.86499999999998%
+[2020-01-26 17:02:32 Info] Running test set for epoch number 50 for dataset idx 3 using test_mc
+[2020-01-26 17:02:35 Info] Stats for test [test_mc] set of size 10000, loss is 0.5574066715192795, acc is 78.8440000000001%
+[2020-01-26 17:02:35 Info] Running test set for epoch number 50 for dataset idx 4 using test_mc
+[2020-01-26 17:02:38 Info] Stats for test [test_mc] set of size 10000, loss is 0.44438398820400243, acc is 84.16900000000001%
+[2020-01-26 17:02:38 Info] Running test set for epoch number 50 for dataset idx 5 using test_mc
+[2020-01-26 17:02:41 Info] Stats for test [test_mc] set of size 10000, loss is 4.832309546089176, acc is 12.314000000000009%
+[2020-01-26 17:02:41 Info] Running test set for epoch number 50 for dataset idx 6 using test_mc
+[2020-01-26 17:02:43 Info] Stats for test [test_mc] set of size 10000, loss is 5.204654679107652, acc is 10.293999999999997%
+[2020-01-26 17:02:43 Info] Running test set for epoch number 50 for dataset idx 7 using test_mc
+[2020-01-26 17:02:46 Info] Stats for test [test_mc] set of size 10000, loss is 4.855721985321045, acc is 14.378999999999987%
+[2020-01-26 17:02:46 Info] Running test set for epoch number 50 for dataset idx 8 using test_mc
+[2020-01-26 17:02:49 Info] Stats for test [test_mc] set of size 10000, loss is 4.681049154129019, acc is 11.445999999999982%
+[2020-01-26 17:02:49 Info] Running test set for epoch number 50 for dataset idx 9 using test_mc
+[2020-01-26 17:02:52 Info] Stats for test [test_mc] set of size 10000, loss is 4.48460629974366, acc is 15.488000000000008%
+[2020-01-26 17:02:52 Info] Average accuracy over all tasks for epoch number 50 for dataset idx 9 using test_mc is 42.51539999999999
+[2020-01-26 17:02:52 Info] Finished epoch number 50, Took 56 seconds
+[2020-01-26 17:02:52 Info] Training epoch number 51 with dataset number 5
+[2020-01-26 17:02:58 Info] Epoch 51, train set, Iter 100 current average loss 1.18126679545641 current average acc 0.0%
+[2020-01-26 17:03:04 Info] Epoch 51, train set, Iter 200 current average loss 0.9675064192414322 current average acc 0.0%
+[2020-01-26 17:03:11 Info] Epoch 51, train set, Iter 300 current average loss 0.8686362221439696 current average acc 0.0%
+[2020-01-26 17:03:17 Info] Epoch 51, train set, Iter 400 current average loss 0.8063631160110223 current average acc 0.0%
+[2020-01-26 17:03:21 Info] Stats for train set of size 60000, loss is 0.7750033777109776, acc is 0.0%
+[2020-01-26 17:03:21 Info] Running test set for epoch number 51 for dataset idx 0 using test_mc
+[2020-01-26 17:03:24 Info] Stats for test [test_mc] set of size 10000, loss is 1.2628705900764456, acc is 63.52100000000003%
+[2020-01-26 17:03:24 Info] Running test set for epoch number 51 for dataset idx 1 using test_mc
+[2020-01-26 17:03:27 Info] Stats for test [test_mc] set of size 10000, loss is 1.15916840950966, acc is 56.733000000000025%
+[2020-01-26 17:03:27 Info] Running test set for epoch number 51 for dataset idx 2 using test_mc
+[2020-01-26 17:03:30 Info] Stats for test [test_mc] set of size 10000, loss is 1.0779825692367548, acc is 61.37399999999994%
+[2020-01-26 17:03:30 Info] Running test set for epoch number 51 for dataset idx 3 using test_mc
+[2020-01-26 17:03:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.6209781791830052, acc is 77.98800000000011%
+[2020-01-26 17:03:32 Info] Running test set for epoch number 51 for dataset idx 4 using test_mc
+[2020-01-26 17:03:35 Info] Stats for test [test_mc] set of size 10000, loss is 0.5152059577894217, acc is 81.91900000000001%
+[2020-01-26 17:03:35 Info] Running test set for epoch number 51 for dataset idx 5 using test_mc
+[2020-01-26 17:03:38 Info] Stats for test [test_mc] set of size 10000, loss is 0.6060561505889867, acc is 78.41499999999996%
+[2020-01-26 17:03:38 Info] Running test set for epoch number 51 for dataset idx 6 using test_mc
+[2020-01-26 17:03:41 Info] Stats for test [test_mc] set of size 10000, loss is 4.88017974098205, acc is 11.939000000000012%
+[2020-01-26 17:03:41 Info] Running test set for epoch number 51 for dataset idx 7 using test_mc
+[2020-01-26 17:03:43 Info] Stats for test [test_mc] set of size 10000, loss is 4.9568216769409155, acc is 15.351000000000019%
+[2020-01-26 17:03:43 Info] Running test set for epoch number 51 for dataset idx 8 using test_mc
+[2020-01-26 17:03:46 Info] Stats for test [test_mc] set of size 10000, loss is 4.637069796142582, acc is 10.661999999999976%
+[2020-01-26 17:03:46 Info] Running test set for epoch number 51 for dataset idx 9 using test_mc
+[2020-01-26 17:03:49 Info] Stats for test [test_mc] set of size 10000, loss is 4.010393862228397, acc is 16.013%
+[2020-01-26 17:03:49 Info] Average accuracy over all tasks for epoch number 51 for dataset idx 9 using test_mc is 47.39150000000001
+[2020-01-26 17:03:49 Info] Finished epoch number 51, Took 57 seconds
+[2020-01-26 17:03:49 Info] Training epoch number 52 with dataset number 5
+[2020-01-26 17:03:55 Info] Epoch 52, train set, Iter 100 current average loss 0.565771315604449 current average acc 0.0%
+[2020-01-26 17:04:02 Info] Epoch 52, train set, Iter 200 current average loss 0.5683174465298649 current average acc 0.0%
+[2020-01-26 17:04:08 Info] Epoch 52, train set, Iter 300 current average loss 0.5572115124166004 current average acc 0.0%
+[2020-01-26 17:04:14 Info] Epoch 52, train set, Iter 400 current average loss 0.553242192283272 current average acc 0.0%
+[2020-01-26 17:04:18 Info] Stats for train set of size 60000, loss is 0.5495271473375952, acc is 0.0%
+[2020-01-26 17:04:18 Info] Finished epoch number 52, Took 29 seconds
+[2020-01-26 17:04:18 Info] Training epoch number 53 with dataset number 5
+[2020-01-26 17:04:25 Info] Epoch 53, train set, Iter 100 current average loss 0.5234124921560293 current average acc 0.0%
+[2020-01-26 17:04:31 Info] Epoch 53, train set, Iter 200 current average loss 0.5134952826797965 current average acc 0.0%
+[2020-01-26 17:04:37 Info] Epoch 53, train set, Iter 300 current average loss 0.5100165877441565 current average acc 0.0%
+[2020-01-26 17:04:43 Info] Epoch 53, train set, Iter 400 current average loss 0.5046467443853615 current average acc 0.0%
+[2020-01-26 17:04:48 Info] Stats for train set of size 60000, loss is 0.5030691281652467, acc is 0.0%
+[2020-01-26 17:04:48 Info] Finished epoch number 53, Took 29 seconds
+[2020-01-26 17:04:48 Info] Training epoch number 54 with dataset number 5
+[2020-01-26 17:04:54 Info] Epoch 54, train set, Iter 100 current average loss 0.49155467984080276 current average acc 0.0%
+[2020-01-26 17:05:01 Info] Epoch 54, train set, Iter 200 current average loss 0.48573353122174634 current average acc 0.0%
+[2020-01-26 17:05:07 Info] Epoch 54, train set, Iter 300 current average loss 0.4821595354477552 current average acc 0.0%
+[2020-01-26 17:05:13 Info] Epoch 54, train set, Iter 400 current average loss 0.4775686733350164 current average acc 0.0%
+[2020-01-26 17:05:17 Info] Stats for train set of size 60000, loss is 0.4774392246198661, acc is 0.0%
+[2020-01-26 17:05:17 Info] Finished epoch number 54, Took 29 seconds
+[2020-01-26 17:05:17 Info] Training epoch number 55 with dataset number 5
+[2020-01-26 17:05:24 Info] Epoch 55, train set, Iter 100 current average loss 0.4691630988717075 current average acc 0.0%
+[2020-01-26 17:05:30 Info] Epoch 55, train set, Iter 200 current average loss 0.46991108275950016 current average acc 0.0%
+[2020-01-26 17:05:36 Info] Epoch 55, train set, Iter 300 current average loss 0.46539363881945606 current average acc 0.0%
+[2020-01-26 17:05:43 Info] Epoch 55, train set, Iter 400 current average loss 0.4624290423542267 current average acc 0.0%
+[2020-01-26 17:05:47 Info] Stats for train set of size 60000, loss is 0.4601856986808778, acc is 0.0%
+[2020-01-26 17:05:47 Info] Finished epoch number 55, Took 29 seconds
+[2020-01-26 17:05:47 Info] Training epoch number 56 with dataset number 5
+[2020-01-26 17:05:53 Info] Epoch 56, train set, Iter 100 current average loss 0.4470139037966723 current average acc 0.0%
+[2020-01-26 17:05:59 Info] Epoch 56, train set, Iter 200 current average loss 0.4492551923394199 current average acc 0.0%
+[2020-01-26 17:06:06 Info] Epoch 56, train set, Iter 300 current average loss 0.45019575324654454 current average acc 0.0%
+[2020-01-26 17:06:12 Info] Epoch 56, train set, Iter 400 current average loss 0.44870382557064237 current average acc 0.0%
+[2020-01-26 17:06:16 Info] Stats for train set of size 60000, loss is 0.44690355902989587, acc is 0.0%
+[2020-01-26 17:06:16 Info] Finished epoch number 56, Took 29 seconds
+[2020-01-26 17:06:16 Info] Training epoch number 57 with dataset number 5
+[2020-01-26 17:06:23 Info] Epoch 57, train set, Iter 100 current average loss 0.4329990266859536 current average acc 0.0%
+[2020-01-26 17:06:29 Info] Epoch 57, train set, Iter 200 current average loss 0.44099924473464663 current average acc 0.0%
+[2020-01-26 17:06:35 Info] Epoch 57, train set, Iter 300 current average loss 0.4377759057978799 current average acc 0.0%
+[2020-01-26 17:06:42 Info] Epoch 57, train set, Iter 400 current average loss 0.4385089926496163 current average acc 0.0%
+[2020-01-26 17:06:46 Info] Stats for train set of size 60000, loss is 0.43627443038304836, acc is 0.0%
+[2020-01-26 17:06:46 Info] Finished epoch number 57, Took 29 seconds
+[2020-01-26 17:06:46 Info] Training epoch number 58 with dataset number 5
+[2020-01-26 17:06:52 Info] Epoch 58, train set, Iter 100 current average loss 0.44115291848778626 current average acc 0.0%
+[2020-01-26 17:06:58 Info] Epoch 58, train set, Iter 200 current average loss 0.4368189350515589 current average acc 0.0%
+[2020-01-26 17:07:05 Info] Epoch 58, train set, Iter 300 current average loss 0.4342023905316971 current average acc 0.0%
+[2020-01-26 17:07:11 Info] Epoch 58, train set, Iter 400 current average loss 0.43036532770097075 current average acc 0.0%
+[2020-01-26 17:07:15 Info] Stats for train set of size 60000, loss is 0.4271088258981686, acc is 0.0%
+[2020-01-26 17:07:15 Info] Finished epoch number 58, Took 29 seconds
+[2020-01-26 17:07:15 Info] Training epoch number 59 with dataset number 5
+[2020-01-26 17:07:22 Info] Epoch 59, train set, Iter 100 current average loss 0.4162279891967778 current average acc 0.0%
+[2020-01-26 17:07:28 Info] Epoch 59, train set, Iter 200 current average loss 0.4191235392391687 current average acc 0.0%
+[2020-01-26 17:07:34 Info] Epoch 59, train set, Iter 300 current average loss 0.4191482871671523 current average acc 0.0%
+[2020-01-26 17:07:40 Info] Epoch 59, train set, Iter 400 current average loss 0.42202011725306554 current average acc 0.0%
+[2020-01-26 17:07:45 Info] Stats for train set of size 60000, loss is 0.419831718440057, acc is 0.0%
+[2020-01-26 17:07:45 Info] Running test set for epoch number 59 for dataset idx 0 using test_mc
+[2020-01-26 17:07:47 Info] Stats for test [test_mc] set of size 10000, loss is 1.6125027509880092, acc is 57.374000000000045%
+[2020-01-26 17:07:47 Info] Running test set for epoch number 59 for dataset idx 1 using test_mc
+[2020-01-26 17:07:50 Info] Stats for test [test_mc] set of size 10000, loss is 1.24839043557167, acc is 55.756%
+[2020-01-26 17:07:50 Info] Running test set for epoch number 59 for dataset idx 2 using test_mc
+[2020-01-26 17:07:53 Info] Stats for test [test_mc] set of size 10000, loss is 1.265059730424881, acc is 56.79499999999989%
+[2020-01-26 17:07:53 Info] Running test set for epoch number 59 for dataset idx 3 using test_mc
+[2020-01-26 17:07:56 Info] Stats for test [test_mc] set of size 10000, loss is 0.6996282751321786, acc is 75.59500000000003%
+[2020-01-26 17:07:56 Info] Running test set for epoch number 59 for dataset idx 4 using test_mc
+[2020-01-26 17:07:58 Info] Stats for test [test_mc] set of size 10000, loss is 0.595365188651086, acc is 78.53299999999992%
+[2020-01-26 17:07:58 Info] Running test set for epoch number 59 for dataset idx 5 using test_mc
+[2020-01-26 17:08:01 Info] Stats for test [test_mc] set of size 10000, loss is 0.4494260388326651, acc is 84.20099999999987%
+[2020-01-26 17:08:01 Info] Running test set for epoch number 59 for dataset idx 6 using test_mc
+[2020-01-26 17:08:04 Info] Stats for test [test_mc] set of size 10000, loss is 5.660787223892209, acc is 11.685999999999993%
+[2020-01-26 17:08:04 Info] Running test set for epoch number 59 for dataset idx 7 using test_mc
+[2020-01-26 17:08:07 Info] Stats for test [test_mc] set of size 10000, loss is 6.0954588803100505, acc is 14.65500000000001%
+[2020-01-26 17:08:07 Info] Running test set for epoch number 59 for dataset idx 8 using test_mc
+[2020-01-26 17:08:10 Info] Stats for test [test_mc] set of size 10000, loss is 5.746803328781132, acc is 11.06199999999998%
+[2020-01-26 17:08:10 Info] Running test set for epoch number 59 for dataset idx 9 using test_mc
+[2020-01-26 17:08:12 Info] Stats for test [test_mc] set of size 10000, loss is 4.814555787582394, acc is 14.442000000000016%
+[2020-01-26 17:08:12 Info] Average accuracy over all tasks for epoch number 59 for dataset idx 9 using test_mc is 46.00989999999998
+[2020-01-26 17:08:12 Info] Finished epoch number 59, Took 56 seconds
+[2020-01-26 17:08:12 Info] Training epoch number 60 with dataset number 5
+[2020-01-26 17:08:19 Info] Epoch 60, train set, Iter 100 current average loss 0.41574759352207147 current average acc 0.0%
+[2020-01-26 17:08:25 Info] Epoch 60, train set, Iter 200 current average loss 0.4139097458571179 current average acc 0.0%
+[2020-01-26 17:08:31 Info] Epoch 60, train set, Iter 300 current average loss 0.41808552466829574 current average acc 0.0%
+[2020-01-26 17:08:38 Info] Epoch 60, train set, Iter 400 current average loss 0.41463717825710694 current average acc 0.0%
+[2020-01-26 17:08:42 Info] Stats for train set of size 60000, loss is 0.4130326690944031, acc is 0.0%
+[2020-01-26 17:08:42 Info] Running test set for epoch number 60 for dataset idx 0 using test_mc
+[2020-01-26 17:08:45 Info] Stats for test [test_mc] set of size 10000, loss is 1.601570204467777, acc is 57.297%
+[2020-01-26 17:08:45 Info] Running test set for epoch number 60 for dataset idx 1 using test_mc
+[2020-01-26 17:08:48 Info] Stats for test [test_mc] set of size 10000, loss is 1.2330533535957313, acc is 56.537999999999975%
+[2020-01-26 17:08:48 Info] Running test set for epoch number 60 for dataset idx 2 using test_mc
+[2020-01-26 17:08:50 Info] Stats for test [test_mc] set of size 10000, loss is 1.2126546364784263, acc is 57.20599999999998%
+[2020-01-26 17:08:50 Info] Running test set for epoch number 60 for dataset idx 3 using test_mc
+[2020-01-26 17:08:53 Info] Stats for test [test_mc] set of size 10000, loss is 0.6991549016809465, acc is 75.78599999999989%
+[2020-01-26 17:08:53 Info] Running test set for epoch number 60 for dataset idx 4 using test_mc
+[2020-01-26 17:08:56 Info] Stats for test [test_mc] set of size 10000, loss is 0.5828362196445468, acc is 79.185%
+[2020-01-26 17:08:56 Info] Running test set for epoch number 60 for dataset idx 5 using test_mc
+[2020-01-26 17:08:59 Info] Stats for test [test_mc] set of size 10000, loss is 0.44427415125846853, acc is 84.42599999999997%
+[2020-01-26 17:08:59 Info] Running test set for epoch number 60 for dataset idx 6 using test_mc
+[2020-01-26 17:09:02 Info] Stats for test [test_mc] set of size 10000, loss is 5.610636166000356, acc is 11.492000000000019%
+[2020-01-26 17:09:02 Info] Running test set for epoch number 60 for dataset idx 7 using test_mc
+[2020-01-26 17:09:04 Info] Stats for test [test_mc] set of size 10000, loss is 6.0737944258117675, acc is 14.796000000000014%
+[2020-01-26 17:09:04 Info] Running test set for epoch number 60 for dataset idx 8 using test_mc
+[2020-01-26 17:09:07 Info] Stats for test [test_mc] set of size 10000, loss is 5.747428430557255, acc is 11.030999999999995%
+[2020-01-26 17:09:07 Info] Running test set for epoch number 60 for dataset idx 9 using test_mc
+[2020-01-26 17:09:10 Info] Stats for test [test_mc] set of size 10000, loss is 4.782184043655386, acc is 14.327000000000021%
+[2020-01-26 17:09:10 Info] Average accuracy over all tasks for epoch number 60 for dataset idx 9 using test_mc is 46.20839999999999
+[2020-01-26 17:09:10 Info] Finished epoch number 60, Took 57 seconds
+[2020-01-26 17:09:10 Info] Training epoch number 61 with dataset number 6
+[2020-01-26 17:09:16 Info] Epoch 61, train set, Iter 100 current average loss 1.1864794656038296 current average acc 0.0%
+[2020-01-26 17:09:23 Info] Epoch 61, train set, Iter 200 current average loss 0.9682170121669745 current average acc 0.0%
+[2020-01-26 17:09:29 Info] Epoch 61, train set, Iter 300 current average loss 0.86500341027975 current average acc 0.0%
+[2020-01-26 17:09:35 Info] Epoch 61, train set, Iter 400 current average loss 0.8014949909076107 current average acc 0.0%
+[2020-01-26 17:09:40 Info] Stats for train set of size 60000, loss is 0.7730807847722369, acc is 0.0%
+[2020-01-26 17:09:40 Info] Running test set for epoch number 61 for dataset idx 0 using test_mc
+[2020-01-26 17:09:42 Info] Stats for test [test_mc] set of size 10000, loss is 1.490010471658707, acc is 57.725%
+[2020-01-26 17:09:42 Info] Running test set for epoch number 61 for dataset idx 1 using test_mc
+[2020-01-26 17:09:45 Info] Stats for test [test_mc] set of size 10000, loss is 1.2691610944080376, acc is 58.094000000000015%
+[2020-01-26 17:09:45 Info] Running test set for epoch number 61 for dataset idx 2 using test_mc
+[2020-01-26 17:09:48 Info] Stats for test [test_mc] set of size 10000, loss is 1.2813547478389746, acc is 58.96299999999997%
+[2020-01-26 17:09:48 Info] Running test set for epoch number 61 for dataset idx 3 using test_mc
+[2020-01-26 17:09:51 Info] Stats for test [test_mc] set of size 10000, loss is 0.6981148717975619, acc is 74.09399999999982%
+[2020-01-26 17:09:51 Info] Running test set for epoch number 61 for dataset idx 4 using test_mc
+[2020-01-26 17:09:53 Info] Stats for test [test_mc] set of size 10000, loss is 0.7085920342731477, acc is 73.77400000000011%
+[2020-01-26 17:09:53 Info] Running test set for epoch number 61 for dataset idx 5 using test_mc
+[2020-01-26 17:09:56 Info] Stats for test [test_mc] set of size 10000, loss is 0.5405929957294463, acc is 80.76700000000008%
+[2020-01-26 17:09:56 Info] Running test set for epoch number 61 for dataset idx 6 using test_mc
+[2020-01-26 17:09:59 Info] Stats for test [test_mc] set of size 10000, loss is 0.6040393657159797, acc is 77.99900000000005%
+[2020-01-26 17:09:59 Info] Running test set for epoch number 61 for dataset idx 7 using test_mc
+[2020-01-26 17:10:02 Info] Stats for test [test_mc] set of size 10000, loss is 4.57766287956238, acc is 18.415%
+[2020-01-26 17:10:02 Info] Running test set for epoch number 61 for dataset idx 8 using test_mc
+[2020-01-26 17:10:05 Info] Stats for test [test_mc] set of size 10000, loss is 4.925542959671015, acc is 10.020000000000001%
+[2020-01-26 17:10:05 Info] Running test set for epoch number 61 for dataset idx 9 using test_mc
+[2020-01-26 17:10:08 Info] Stats for test [test_mc] set of size 10000, loss is 3.7222197771835375, acc is 15.401999999999985%
+[2020-01-26 17:10:08 Info] Average accuracy over all tasks for epoch number 61 for dataset idx 9 using test_mc is 52.52530000000001
+[2020-01-26 17:10:08 Info] Finished epoch number 61, Took 57 seconds
+[2020-01-26 17:10:08 Info] Training epoch number 62 with dataset number 6
+[2020-01-26 17:10:14 Info] Epoch 62, train set, Iter 100 current average loss 0.5865146444141864 current average acc 0.0%
+[2020-01-26 17:10:20 Info] Epoch 62, train set, Iter 200 current average loss 0.5644477089345448 current average acc 0.0%
+[2020-01-26 17:10:26 Info] Epoch 62, train set, Iter 300 current average loss 0.5580689778228599 current average acc 0.0%
+[2020-01-26 17:10:33 Info] Epoch 62, train set, Iter 400 current average loss 0.5540034165531378 current average acc 0.0%
+[2020-01-26 17:10:37 Info] Stats for train set of size 60000, loss is 0.5498649014822647, acc is 0.0%
+[2020-01-26 17:10:37 Info] Finished epoch number 62, Took 29 seconds
+[2020-01-26 17:10:37 Info] Training epoch number 63 with dataset number 6
+[2020-01-26 17:10:43 Info] Epoch 63, train set, Iter 100 current average loss 0.5203833962678914 current average acc 0.0%
+[2020-01-26 17:10:50 Info] Epoch 63, train set, Iter 200 current average loss 0.5200910058766613 current average acc 0.0%
+[2020-01-26 17:10:56 Info] Epoch 63, train set, Iter 300 current average loss 0.5119411564568662 current average acc 0.0%
+[2020-01-26 17:11:02 Info] Epoch 63, train set, Iter 400 current average loss 0.5076969490423815 current average acc 0.0%
+[2020-01-26 17:11:07 Info] Stats for train set of size 60000, loss is 0.5035361684004493, acc is 0.0%
+[2020-01-26 17:11:07 Info] Finished epoch number 63, Took 29 seconds
+[2020-01-26 17:11:07 Info] Training epoch number 64 with dataset number 6
+[2020-01-26 17:11:13 Info] Epoch 64, train set, Iter 100 current average loss 0.4778260004222392 current average acc 0.0%
+[2020-01-26 17:11:19 Info] Epoch 64, train set, Iter 200 current average loss 0.4771236547380684 current average acc 0.0%
+[2020-01-26 17:11:25 Info] Epoch 64, train set, Iter 300 current average loss 0.47788286027312343 current average acc 0.0%
+[2020-01-26 17:11:32 Info] Epoch 64, train set, Iter 400 current average loss 0.47534985208138725 current average acc 0.0%
+[2020-01-26 17:11:36 Info] Stats for train set of size 60000, loss is 0.4764313497908903, acc is 0.0%
+[2020-01-26 17:11:36 Info] Finished epoch number 64, Took 29 seconds
+[2020-01-26 17:11:36 Info] Training epoch number 65 with dataset number 6
+[2020-01-26 17:11:43 Info] Epoch 65, train set, Iter 100 current average loss 0.458780325174332 current average acc 0.0%
+[2020-01-26 17:11:49 Info] Epoch 65, train set, Iter 200 current average loss 0.46074095977842866 current average acc 0.0%
+[2020-01-26 17:11:55 Info] Epoch 65, train set, Iter 300 current average loss 0.46000776051481596 current average acc 0.0%
+[2020-01-26 17:12:01 Info] Epoch 65, train set, Iter 400 current average loss 0.45658469266444446 current average acc 0.0%
+[2020-01-26 17:12:06 Info] Stats for train set of size 60000, loss is 0.4576830655638376, acc is 0.0%
+[2020-01-26 17:12:06 Info] Finished epoch number 65, Took 29 seconds
+[2020-01-26 17:12:06 Info] Training epoch number 66 with dataset number 6
+[2020-01-26 17:12:12 Info] Epoch 66, train set, Iter 100 current average loss 0.45875539672374815 current average acc 0.0%
+[2020-01-26 17:12:18 Info] Epoch 66, train set, Iter 200 current average loss 0.4578343989104041 current average acc 0.0%
+[2020-01-26 17:12:25 Info] Epoch 66, train set, Iter 300 current average loss 0.4501788436869784 current average acc 0.0%
+[2020-01-26 17:12:31 Info] Epoch 66, train set, Iter 400 current average loss 0.44659259687363967 current average acc 0.0%
+[2020-01-26 17:12:35 Info] Stats for train set of size 60000, loss is 0.44438363452911145, acc is 0.0%
+[2020-01-26 17:12:35 Info] Finished epoch number 66, Took 29 seconds
+[2020-01-26 17:12:35 Info] Training epoch number 67 with dataset number 6
+[2020-01-26 17:12:42 Info] Epoch 67, train set, Iter 100 current average loss 0.43755088829994204 current average acc 0.0%
+[2020-01-26 17:12:48 Info] Epoch 67, train set, Iter 200 current average loss 0.43710074630379653 current average acc 0.0%
+[2020-01-26 17:12:54 Info] Epoch 67, train set, Iter 300 current average loss 0.43338031716148023 current average acc 0.0%
+[2020-01-26 17:13:00 Info] Epoch 67, train set, Iter 400 current average loss 0.431537815414368 current average acc 0.0%
+[2020-01-26 17:13:05 Info] Stats for train set of size 60000, loss is 0.43288399098078395, acc is 0.0%
+[2020-01-26 17:13:05 Info] Finished epoch number 67, Took 29 seconds
+[2020-01-26 17:13:05 Info] Training epoch number 68 with dataset number 6
+[2020-01-26 17:13:11 Info] Epoch 68, train set, Iter 100 current average loss 0.4369529381096362 current average acc 0.0%
+[2020-01-26 17:13:18 Info] Epoch 68, train set, Iter 200 current average loss 0.42847661979496443 current average acc 0.0%
+[2020-01-26 17:13:24 Info] Epoch 68, train set, Iter 300 current average loss 0.4265933393041281 current average acc 0.0%
+[2020-01-26 17:13:30 Info] Epoch 68, train set, Iter 400 current average loss 0.4227482524774963 current average acc 0.0%
+[2020-01-26 17:13:34 Info] Stats for train set of size 60000, loss is 0.42343401031812006, acc is 0.0%
+[2020-01-26 17:13:34 Info] Finished epoch number 68, Took 29 seconds
+[2020-01-26 17:13:34 Info] Training epoch number 69 with dataset number 6
+[2020-01-26 17:13:41 Info] Epoch 69, train set, Iter 100 current average loss 0.40660826811194495 current average acc 0.0%
+[2020-01-26 17:13:47 Info] Epoch 69, train set, Iter 200 current average loss 0.4058495870083575 current average acc 0.0%
+[2020-01-26 17:13:53 Info] Epoch 69, train set, Iter 300 current average loss 0.41246757366756626 current average acc 0.0%
+[2020-01-26 17:13:59 Info] Epoch 69, train set, Iter 400 current average loss 0.4164003802202649 current average acc 0.0%
+[2020-01-26 17:14:04 Info] Stats for train set of size 60000, loss is 0.4160241384410867, acc is 0.0%
+[2020-01-26 17:14:04 Info] Running test set for epoch number 69 for dataset idx 0 using test_mc
+[2020-01-26 17:14:07 Info] Stats for test [test_mc] set of size 10000, loss is 1.4484141613578816, acc is 59.150000000000084%
+[2020-01-26 17:14:07 Info] Running test set for epoch number 69 for dataset idx 1 using test_mc
+[2020-01-26 17:14:09 Info] Stats for test [test_mc] set of size 10000, loss is 1.388198115653993, acc is 57.75500000000002%
+[2020-01-26 17:14:09 Info] Running test set for epoch number 69 for dataset idx 2 using test_mc
+[2020-01-26 17:14:12 Info] Stats for test [test_mc] set of size 10000, loss is 1.2269950109291077, acc is 59.87099999999993%
+[2020-01-26 17:14:12 Info] Running test set for epoch number 69 for dataset idx 3 using test_mc
+[2020-01-26 17:14:15 Info] Stats for test [test_mc] set of size 10000, loss is 0.7204508566808686, acc is 73.94700000000007%
+[2020-01-26 17:14:15 Info] Running test set for epoch number 69 for dataset idx 4 using test_mc
+[2020-01-26 17:14:18 Info] Stats for test [test_mc] set of size 10000, loss is 0.7315863160037993, acc is 75.0640000000002%
+[2020-01-26 17:14:18 Info] Running test set for epoch number 69 for dataset idx 5 using test_mc
+[2020-01-26 17:14:21 Info] Stats for test [test_mc] set of size 10000, loss is 0.5847836601829536, acc is 78.88900000000002%
+[2020-01-26 17:14:21 Info] Running test set for epoch number 69 for dataset idx 6 using test_mc
+[2020-01-26 17:14:23 Info] Stats for test [test_mc] set of size 10000, loss is 0.44448472266197164, acc is 84.31299999999983%
+[2020-01-26 17:14:23 Info] Running test set for epoch number 69 for dataset idx 7 using test_mc
+[2020-01-26 17:14:26 Info] Stats for test [test_mc] set of size 10000, loss is 5.471965151062015, acc is 14.750999999999987%
+[2020-01-26 17:14:26 Info] Running test set for epoch number 69 for dataset idx 8 using test_mc
+[2020-01-26 17:14:29 Info] Stats for test [test_mc] set of size 10000, loss is 7.009674749679563, acc is 11.137000000000002%
+[2020-01-26 17:14:29 Info] Running test set for epoch number 69 for dataset idx 9 using test_mc
+[2020-01-26 17:14:32 Info] Stats for test [test_mc] set of size 10000, loss is 4.520692966842642, acc is 14.207%
+[2020-01-26 17:14:32 Info] Average accuracy over all tasks for epoch number 69 for dataset idx 9 using test_mc is 52.908400000000015
+[2020-01-26 17:14:32 Info] Finished epoch number 69, Took 57 seconds
+[2020-01-26 17:14:32 Info] Training epoch number 70 with dataset number 6
+[2020-01-26 17:14:38 Info] Epoch 70, train set, Iter 100 current average loss 0.40272996740043143 current average acc 0.0%
+[2020-01-26 17:14:45 Info] Epoch 70, train set, Iter 200 current average loss 0.4064254453629245 current average acc 0.0%
+[2020-01-26 17:14:51 Info] Epoch 70, train set, Iter 300 current average loss 0.4071569960017995 current average acc 0.0%
+[2020-01-26 17:14:57 Info] Epoch 70, train set, Iter 400 current average loss 0.40791311392187984 current average acc 0.0%
+[2020-01-26 17:15:01 Info] Stats for train set of size 60000, loss is 0.40847880533536274, acc is 0.0%
+[2020-01-26 17:15:01 Info] Running test set for epoch number 70 for dataset idx 0 using test_mc
+[2020-01-26 17:15:04 Info] Stats for test [test_mc] set of size 10000, loss is 1.4603605494117737, acc is 59.895000000000024%
+[2020-01-26 17:15:04 Info] Running test set for epoch number 70 for dataset idx 1 using test_mc
+[2020-01-26 17:15:07 Info] Stats for test [test_mc] set of size 10000, loss is 1.384130571813584, acc is 59.13699999999999%
+[2020-01-26 17:15:07 Info] Running test set for epoch number 70 for dataset idx 2 using test_mc
+[2020-01-26 17:15:10 Info] Stats for test [test_mc] set of size 10000, loss is 1.2001351814174634, acc is 60.30200000000011%
+[2020-01-26 17:15:10 Info] Running test set for epoch number 70 for dataset idx 3 using test_mc
+[2020-01-26 17:15:13 Info] Stats for test [test_mc] set of size 10000, loss is 0.7335094479465499, acc is 73.47200000000002%
+[2020-01-26 17:15:13 Info] Running test set for epoch number 70 for dataset idx 4 using test_mc
+[2020-01-26 17:15:15 Info] Stats for test [test_mc] set of size 10000, loss is 0.7389069880485549, acc is 75.50000000000014%
+[2020-01-26 17:15:15 Info] Running test set for epoch number 70 for dataset idx 5 using test_mc
+[2020-01-26 17:15:18 Info] Stats for test [test_mc] set of size 10000, loss is 0.5924197134304051, acc is 78.568%
+[2020-01-26 17:15:18 Info] Running test set for epoch number 70 for dataset idx 6 using test_mc
+[2020-01-26 17:15:21 Info] Stats for test [test_mc] set of size 10000, loss is 0.4381723240137097, acc is 84.51299999999988%
+[2020-01-26 17:15:21 Info] Running test set for epoch number 70 for dataset idx 7 using test_mc
+[2020-01-26 17:15:24 Info] Stats for test [test_mc] set of size 10000, loss is 5.535276597213744, acc is 14.536999999999988%
+[2020-01-26 17:15:24 Info] Running test set for epoch number 70 for dataset idx 8 using test_mc
+[2020-01-26 17:15:27 Info] Stats for test [test_mc] set of size 10000, loss is 7.112677737579343, acc is 11.070000000000011%
+[2020-01-26 17:15:27 Info] Running test set for epoch number 70 for dataset idx 9 using test_mc
+[2020-01-26 17:15:29 Info] Stats for test [test_mc] set of size 10000, loss is 4.536578076133726, acc is 14.148999999999996%
+[2020-01-26 17:15:29 Info] Average accuracy over all tasks for epoch number 70 for dataset idx 9 using test_mc is 53.114300000000014
+[2020-01-26 17:15:29 Info] Finished epoch number 70, Took 57 seconds
+[2020-01-26 17:15:29 Info] Training epoch number 71 with dataset number 7
+[2020-01-26 17:15:36 Info] Epoch 71, train set, Iter 100 current average loss 1.1786513408422474 current average acc 0.0%
+[2020-01-26 17:15:42 Info] Epoch 71, train set, Iter 200 current average loss 0.9618521696478086 current average acc 0.0%
+[2020-01-26 17:15:49 Info] Epoch 71, train set, Iter 300 current average loss 0.8585280141631724 current average acc 0.0%
+[2020-01-26 17:15:55 Info] Epoch 71, train set, Iter 400 current average loss 0.798768119916317 current average acc 0.0%
+[2020-01-26 17:15:59 Info] Stats for train set of size 60000, loss is 0.7681179321225464, acc is 0.0%
+[2020-01-26 17:15:59 Info] Running test set for epoch number 71 for dataset idx 0 using test_mc
+[2020-01-26 17:16:02 Info] Stats for test [test_mc] set of size 10000, loss is 1.4031681061077095, acc is 56.938000000000066%
+[2020-01-26 17:16:02 Info] Running test set for epoch number 71 for dataset idx 1 using test_mc
+[2020-01-26 17:16:05 Info] Stats for test [test_mc] set of size 10000, loss is 1.610933887557981, acc is 43.89900000000004%
+[2020-01-26 17:16:05 Info] Running test set for epoch number 71 for dataset idx 2 using test_mc
+[2020-01-26 17:16:07 Info] Stats for test [test_mc] set of size 10000, loss is 1.4193283045387255, acc is 52.64799999999996%
+[2020-01-26 17:16:07 Info] Running test set for epoch number 71 for dataset idx 3 using test_mc
+[2020-01-26 17:16:10 Info] Stats for test [test_mc] set of size 10000, loss is 0.8613794483804712, acc is 68.09099999999995%
+[2020-01-26 17:16:10 Info] Running test set for epoch number 71 for dataset idx 4 using test_mc
+[2020-01-26 17:16:13 Info] Stats for test [test_mc] set of size 10000, loss is 0.8853426211309432, acc is 65.87199999999989%
+[2020-01-26 17:16:13 Info] Running test set for epoch number 71 for dataset idx 5 using test_mc
+[2020-01-26 17:16:16 Info] Stats for test [test_mc] set of size 10000, loss is 0.6915040825128558, acc is 75.14599999999993%
+[2020-01-26 17:16:16 Info] Running test set for epoch number 71 for dataset idx 6 using test_mc
+[2020-01-26 17:16:19 Info] Stats for test [test_mc] set of size 10000, loss is 0.6238897775506953, acc is 77.48199999999997%
+[2020-01-26 17:16:19 Info] Running test set for epoch number 71 for dataset idx 7 using test_mc
+[2020-01-26 17:16:21 Info] Stats for test [test_mc] set of size 10000, loss is 0.6050799919128425, acc is 78.10599999999971%
+[2020-01-26 17:16:21 Info] Running test set for epoch number 71 for dataset idx 8 using test_mc
+[2020-01-26 17:16:24 Info] Stats for test [test_mc] set of size 10000, loss is 6.372563767471312, acc is 11.591999999999983%
+[2020-01-26 17:16:24 Info] Running test set for epoch number 71 for dataset idx 9 using test_mc
+[2020-01-26 17:16:27 Info] Stats for test [test_mc] set of size 10000, loss is 3.7479718238067634, acc is 16.08%
+[2020-01-26 17:16:27 Info] Average accuracy over all tasks for epoch number 71 for dataset idx 9 using test_mc is 54.58539999999995
+[2020-01-26 17:16:27 Info] Finished epoch number 71, Took 57 seconds
+[2020-01-26 17:16:27 Info] Training epoch number 72 with dataset number 7
+[2020-01-26 17:16:33 Info] Epoch 72, train set, Iter 100 current average loss 0.5784261851012714 current average acc 0.0%
+[2020-01-26 17:16:40 Info] Epoch 72, train set, Iter 200 current average loss 0.5667117816358826 current average acc 0.0%
+[2020-01-26 17:16:46 Info] Epoch 72, train set, Iter 300 current average loss 0.5569302457869063 current average acc 0.0%
+[2020-01-26 17:16:52 Info] Epoch 72, train set, Iter 400 current average loss 0.5524421552047135 current average acc 0.0%
+[2020-01-26 17:16:57 Info] Stats for train set of size 60000, loss is 0.5490396878067656, acc is 0.0%
+[2020-01-26 17:16:57 Info] Finished epoch number 72, Took 29 seconds
+[2020-01-26 17:16:57 Info] Training epoch number 73 with dataset number 7
+[2020-01-26 17:17:03 Info] Epoch 73, train set, Iter 100 current average loss 0.5104145894646654 current average acc 0.0%
+[2020-01-26 17:17:09 Info] Epoch 73, train set, Iter 200 current average loss 0.5113758157342668 current average acc 0.0%
+[2020-01-26 17:17:15 Info] Epoch 73, train set, Iter 300 current average loss 0.5059807832042369 current average acc 0.0%
+[2020-01-26 17:17:22 Info] Epoch 73, train set, Iter 400 current average loss 0.5065605368986728 current average acc 0.0%
+[2020-01-26 17:17:26 Info] Stats for train set of size 60000, loss is 0.5042970199473698, acc is 0.0%
+[2020-01-26 17:17:26 Info] Finished epoch number 73, Took 29 seconds
+[2020-01-26 17:17:26 Info] Training epoch number 74 with dataset number 7
+[2020-01-26 17:17:33 Info] Epoch 74, train set, Iter 100 current average loss 0.4964816741943361 current average acc 0.0%
+[2020-01-26 17:17:39 Info] Epoch 74, train set, Iter 200 current average loss 0.4852134873121966 current average acc 0.0%
+[2020-01-26 17:17:45 Info] Epoch 74, train set, Iter 300 current average loss 0.4835538165867325 current average acc 0.0%
+[2020-01-26 17:17:51 Info] Epoch 74, train set, Iter 400 current average loss 0.4799385887756944 current average acc 0.0%
+[2020-01-26 17:17:56 Info] Stats for train set of size 60000, loss is 0.4775100090662642, acc is 0.0%
+[2020-01-26 17:17:56 Info] Finished epoch number 74, Took 29 seconds
+[2020-01-26 17:17:56 Info] Training epoch number 75 with dataset number 7
+[2020-01-26 17:18:02 Info] Epoch 75, train set, Iter 100 current average loss 0.4694283184409137 current average acc 0.0%
+[2020-01-26 17:18:09 Info] Epoch 75, train set, Iter 200 current average loss 0.4656214006394146 current average acc 0.0%
+[2020-01-26 17:18:15 Info] Epoch 75, train set, Iter 300 current average loss 0.4622918414672207 current average acc 0.0%
+[2020-01-26 17:18:22 Info] Epoch 75, train set, Iter 400 current average loss 0.46068497439473804 current average acc 0.0%
+[2020-01-26 17:18:26 Info] Stats for train set of size 60000, loss is 0.459460519965491, acc is 0.0%
+[2020-01-26 17:18:26 Info] Finished epoch number 75, Took 29 seconds
+[2020-01-26 17:18:26 Info] Training epoch number 76 with dataset number 7
+[2020-01-26 17:18:32 Info] Epoch 76, train set, Iter 100 current average loss 0.4488998071253299 current average acc 0.0%
+[2020-01-26 17:18:39 Info] Epoch 76, train set, Iter 200 current average loss 0.45031720259785774 current average acc 0.0%
+[2020-01-26 17:18:45 Info] Epoch 76, train set, Iter 300 current average loss 0.45046744087338536 current average acc 0.0%
+[2020-01-26 17:18:51 Info] Epoch 76, train set, Iter 400 current average loss 0.44838737015426217 current average acc 0.0%
+[2020-01-26 17:18:56 Info] Stats for train set of size 60000, loss is 0.44696770146687864, acc is 0.0%
+[2020-01-26 17:18:56 Info] Finished epoch number 76, Took 29 seconds
+[2020-01-26 17:18:56 Info] Training epoch number 77 with dataset number 7
+[2020-01-26 17:19:02 Info] Epoch 77, train set, Iter 100 current average loss 0.42980251631140765 current average acc 0.0%
+[2020-01-26 17:19:09 Info] Epoch 77, train set, Iter 200 current average loss 0.4370780433118334 current average acc 0.0%
+[2020-01-26 17:19:15 Info] Epoch 77, train set, Iter 300 current average loss 0.4364000217765569 current average acc 0.0%
+[2020-01-26 17:19:21 Info] Epoch 77, train set, Iter 400 current average loss 0.4359609952457253 current average acc 0.0%
+[2020-01-26 17:19:26 Info] Stats for train set of size 60000, loss is 0.4359857517655688, acc is 0.0%
+[2020-01-26 17:19:26 Info] Finished epoch number 77, Took 29 seconds
+[2020-01-26 17:19:26 Info] Training epoch number 78 with dataset number 7
+[2020-01-26 17:19:32 Info] Epoch 78, train set, Iter 100 current average loss 0.42809830057620923 current average acc 0.0%
+[2020-01-26 17:19:38 Info] Epoch 78, train set, Iter 200 current average loss 0.4260625321567055 current average acc 0.0%
+[2020-01-26 17:19:45 Info] Epoch 78, train set, Iter 300 current average loss 0.42583648177981387 current average acc 0.0%
+[2020-01-26 17:19:51 Info] Epoch 78, train set, Iter 400 current average loss 0.42793583440780497 current average acc 0.0%
+[2020-01-26 17:19:56 Info] Stats for train set of size 60000, loss is 0.4268481127373351, acc is 0.0%
+[2020-01-26 17:19:56 Info] Finished epoch number 78, Took 29 seconds
+[2020-01-26 17:19:56 Info] Training epoch number 79 with dataset number 7
+[2020-01-26 17:20:02 Info] Epoch 79, train set, Iter 100 current average loss 0.43190564398467607 current average acc 0.0%
+[2020-01-26 17:20:08 Info] Epoch 79, train set, Iter 200 current average loss 0.429796404965223 current average acc 0.0%
+[2020-01-26 17:20:15 Info] Epoch 79, train set, Iter 300 current average loss 0.42448523475229866 current average acc 0.0%
+[2020-01-26 17:20:21 Info] Epoch 79, train set, Iter 400 current average loss 0.41825363345444255 current average acc 0.0%
+[2020-01-26 17:20:25 Info] Stats for train set of size 60000, loss is 0.41859543783346875, acc is 0.0%
+[2020-01-26 17:20:25 Info] Running test set for epoch number 79 for dataset idx 0 using test_mc
+[2020-01-26 17:20:28 Info] Stats for test [test_mc] set of size 10000, loss is 1.7585624956512453, acc is 52.15500000000006%
+[2020-01-26 17:20:28 Info] Running test set for epoch number 79 for dataset idx 1 using test_mc
+[2020-01-26 17:20:31 Info] Stats for test [test_mc] set of size 10000, loss is 1.742044933738707, acc is 44.528999999999996%
+[2020-01-26 17:20:31 Info] Running test set for epoch number 79 for dataset idx 2 using test_mc
+[2020-01-26 17:20:34 Info] Stats for test [test_mc] set of size 10000, loss is 1.338008139247895, acc is 51.81699999999998%
+[2020-01-26 17:20:34 Info] Running test set for epoch number 79 for dataset idx 3 using test_mc
+[2020-01-26 17:20:36 Info] Stats for test [test_mc] set of size 10000, loss is 0.8202295278787619, acc is 70.19799999999988%
+[2020-01-26 17:20:36 Info] Running test set for epoch number 79 for dataset idx 4 using test_mc
+[2020-01-26 17:20:39 Info] Stats for test [test_mc] set of size 10000, loss is 1.0601297399139418, acc is 59.82199999999999%
+[2020-01-26 17:20:39 Info] Running test set for epoch number 79 for dataset idx 5 using test_mc
+[2020-01-26 17:20:42 Info] Stats for test [test_mc] set of size 10000, loss is 0.969709561386109, acc is 65.65900000000005%
+[2020-01-26 17:20:42 Info] Running test set for epoch number 79 for dataset idx 6 using test_mc
+[2020-01-26 17:20:45 Info] Stats for test [test_mc] set of size 10000, loss is 0.6081972202730175, acc is 77.79099999999987%
+[2020-01-26 17:20:45 Info] Running test set for epoch number 79 for dataset idx 7 using test_mc
+[2020-01-26 17:20:47 Info] Stats for test [test_mc] set of size 10000, loss is 0.4457670808839805, acc is 84.16399999999993%
+[2020-01-26 17:20:47 Info] Running test set for epoch number 79 for dataset idx 8 using test_mc
+[2020-01-26 17:20:50 Info] Stats for test [test_mc] set of size 10000, loss is 7.7411090793609665, acc is 12.136999999999986%
+[2020-01-26 17:20:50 Info] Running test set for epoch number 79 for dataset idx 9 using test_mc
+[2020-01-26 17:20:53 Info] Stats for test [test_mc] set of size 10000, loss is 4.513072579498293, acc is 18.421999999999972%
+[2020-01-26 17:20:53 Info] Average accuracy over all tasks for epoch number 79 for dataset idx 9 using test_mc is 53.66939999999997
+[2020-01-26 17:20:53 Info] Finished epoch number 79, Took 57 seconds
+[2020-01-26 17:20:53 Info] Training epoch number 80 with dataset number 7
+[2020-01-26 17:21:00 Info] Epoch 80, train set, Iter 100 current average loss 0.4230869044065486 current average acc 0.0%
+[2020-01-26 17:21:06 Info] Epoch 80, train set, Iter 200 current average loss 0.4186059645265345 current average acc 0.0%
+[2020-01-26 17:21:12 Info] Epoch 80, train set, Iter 300 current average loss 0.41397621302803417 current average acc 0.0%
+[2020-01-26 17:21:18 Info] Epoch 80, train set, Iter 400 current average loss 0.41278852717205916 current average acc 0.0%
+[2020-01-26 17:21:23 Info] Stats for train set of size 60000, loss is 0.4116202484289799, acc is 0.0%
+[2020-01-26 17:21:23 Info] Running test set for epoch number 80 for dataset idx 0 using test_mc
+[2020-01-26 17:21:26 Info] Stats for test [test_mc] set of size 10000, loss is 1.7854164398002637, acc is 51.59999999999999%
+[2020-01-26 17:21:26 Info] Running test set for epoch number 80 for dataset idx 1 using test_mc
+[2020-01-26 17:21:28 Info] Stats for test [test_mc] set of size 10000, loss is 1.79774692308426, acc is 43.69500000000005%
+[2020-01-26 17:21:28 Info] Running test set for epoch number 80 for dataset idx 2 using test_mc
+[2020-01-26 17:21:31 Info] Stats for test [test_mc] set of size 10000, loss is 1.3608922810459136, acc is 51.081999999999915%
+[2020-01-26 17:21:31 Info] Running test set for epoch number 80 for dataset idx 3 using test_mc
+[2020-01-26 17:21:34 Info] Stats for test [test_mc] set of size 10000, loss is 0.8319477074766173, acc is 69.53500000000005%
+[2020-01-26 17:21:34 Info] Running test set for epoch number 80 for dataset idx 4 using test_mc
+[2020-01-26 17:21:37 Info] Stats for test [test_mc] set of size 10000, loss is 1.087053426470757, acc is 58.97700000000004%
+[2020-01-26 17:21:37 Info] Running test set for epoch number 80 for dataset idx 5 using test_mc
+[2020-01-26 17:21:40 Info] Stats for test [test_mc] set of size 10000, loss is 0.9911317054367074, acc is 65.00500000000007%
+[2020-01-26 17:21:40 Info] Running test set for epoch number 80 for dataset idx 6 using test_mc
+[2020-01-26 17:21:42 Info] Stats for test [test_mc] set of size 10000, loss is 0.6087716692876816, acc is 77.73499999999996%
+[2020-01-26 17:21:42 Info] Running test set for epoch number 80 for dataset idx 7 using test_mc
+[2020-01-26 17:21:45 Info] Stats for test [test_mc] set of size 10000, loss is 0.44206639937877684, acc is 84.28800000000008%
+[2020-01-26 17:21:45 Info] Running test set for epoch number 80 for dataset idx 8 using test_mc
+[2020-01-26 17:21:48 Info] Stats for test [test_mc] set of size 10000, loss is 7.811730443344116, acc is 12.092000000000004%
+[2020-01-26 17:21:48 Info] Running test set for epoch number 80 for dataset idx 9 using test_mc
+[2020-01-26 17:21:51 Info] Stats for test [test_mc] set of size 10000, loss is 4.555283861160281, acc is 18.45199999999997%
+[2020-01-26 17:21:51 Info] Average accuracy over all tasks for epoch number 80 for dataset idx 9 using test_mc is 53.24610000000001
+[2020-01-26 17:21:51 Info] Finished epoch number 80, Took 57 seconds
+[2020-01-26 17:21:51 Info] Training epoch number 81 with dataset number 8
+[2020-01-26 17:21:57 Info] Epoch 81, train set, Iter 100 current average loss 1.2267649669647216 current average acc 0.0%
+[2020-01-26 17:22:03 Info] Epoch 81, train set, Iter 200 current average loss 0.9850037349611517 current average acc 0.0%
+[2020-01-26 17:22:10 Info] Epoch 81, train set, Iter 300 current average loss 0.8724912941654508 current average acc 0.0%
+[2020-01-26 17:22:16 Info] Epoch 81, train set, Iter 400 current average loss 0.8097550572231402 current average acc 0.0%
+[2020-01-26 17:22:21 Info] Stats for train set of size 60000, loss is 0.7770514755090077, acc is 0.0%
+[2020-01-26 17:22:21 Info] Running test set for epoch number 81 for dataset idx 0 using test_mc
+[2020-01-26 17:22:23 Info] Stats for test [test_mc] set of size 10000, loss is 1.488956328439712, acc is 54.487000000000016%
+[2020-01-26 17:22:23 Info] Running test set for epoch number 81 for dataset idx 1 using test_mc
+[2020-01-26 17:22:26 Info] Stats for test [test_mc] set of size 10000, loss is 1.4461960878753657, acc is 46.31299999999993%
+[2020-01-26 17:22:26 Info] Running test set for epoch number 81 for dataset idx 2 using test_mc
+[2020-01-26 17:22:29 Info] Stats for test [test_mc] set of size 10000, loss is 1.5869418187713626, acc is 46.33899999999996%
+[2020-01-26 17:22:29 Info] Running test set for epoch number 81 for dataset idx 3 using test_mc
+[2020-01-26 17:22:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.8918439988517761, acc is 66.86899999999987%
+[2020-01-26 17:22:32 Info] Running test set for epoch number 81 for dataset idx 4 using test_mc
+[2020-01-26 17:22:35 Info] Stats for test [test_mc] set of size 10000, loss is 0.9791006505489347, acc is 64.2300000000001%
+[2020-01-26 17:22:35 Info] Running test set for epoch number 81 for dataset idx 5 using test_mc
+[2020-01-26 17:22:37 Info] Stats for test [test_mc] set of size 10000, loss is 0.980763244104385, acc is 68.01599999999976%
+[2020-01-26 17:22:37 Info] Running test set for epoch number 81 for dataset idx 6 using test_mc
+[2020-01-26 17:22:40 Info] Stats for test [test_mc] set of size 10000, loss is 0.8842391096687324, acc is 68.25200000000005%
+[2020-01-26 17:22:40 Info] Running test set for epoch number 81 for dataset idx 7 using test_mc
+[2020-01-26 17:22:43 Info] Stats for test [test_mc] set of size 10000, loss is 0.6000041510295865, acc is 78.85000000000002%
+[2020-01-26 17:22:43 Info] Running test set for epoch number 81 for dataset idx 8 using test_mc
+[2020-01-26 17:22:46 Info] Stats for test [test_mc] set of size 10000, loss is 0.6035616753625868, acc is 78.17200000000011%
+[2020-01-26 17:22:46 Info] Running test set for epoch number 81 for dataset idx 9 using test_mc
+[2020-01-26 17:22:48 Info] Stats for test [test_mc] set of size 10000, loss is 3.140304416427615, acc is 18.010999999999974%
+[2020-01-26 17:22:48 Info] Average accuracy over all tasks for epoch number 81 for dataset idx 9 using test_mc is 58.9539
+[2020-01-26 17:22:48 Info] Finished epoch number 81, Took 57 seconds
+[2020-01-26 17:22:48 Info] Training epoch number 82 with dataset number 8
+[2020-01-26 17:22:55 Info] Epoch 82, train set, Iter 100 current average loss 0.5664804541170602 current average acc 0.0%
+[2020-01-26 17:23:01 Info] Epoch 82, train set, Iter 200 current average loss 0.5691967950314286 current average acc 0.0%
+[2020-01-26 17:23:07 Info] Epoch 82, train set, Iter 300 current average loss 0.5608622922201962 current average acc 0.0%
+[2020-01-26 17:23:14 Info] Epoch 82, train set, Iter 400 current average loss 0.5528231947869057 current average acc 0.0%
+[2020-01-26 17:23:18 Info] Stats for train set of size 60000, loss is 0.549230884437562, acc is 0.0%
+[2020-01-26 17:23:18 Info] Finished epoch number 82, Took 29 seconds
+[2020-01-26 17:23:18 Info] Training epoch number 83 with dataset number 8
+[2020-01-26 17:23:25 Info] Epoch 83, train set, Iter 100 current average loss 0.5183431289494036 current average acc 0.0%
+[2020-01-26 17:23:31 Info] Epoch 83, train set, Iter 200 current average loss 0.5160769914239628 current average acc 0.0%
+[2020-01-26 17:23:37 Info] Epoch 83, train set, Iter 300 current average loss 0.5101671159863451 current average acc 0.0%
+[2020-01-26 17:23:44 Info] Epoch 83, train set, Iter 400 current average loss 0.5073679028451431 current average acc 0.0%
+[2020-01-26 17:23:48 Info] Stats for train set of size 60000, loss is 0.5045643116919192, acc is 0.0%
+[2020-01-26 17:23:48 Info] Finished epoch number 83, Took 29 seconds
+[2020-01-26 17:23:48 Info] Training epoch number 84 with dataset number 8
+[2020-01-26 17:23:54 Info] Epoch 84, train set, Iter 100 current average loss 0.48577166584134035 current average acc 0.0%
+[2020-01-26 17:24:00 Info] Epoch 84, train set, Iter 200 current average loss 0.480030587062241 current average acc 0.0%
+[2020-01-26 17:24:07 Info] Epoch 84, train set, Iter 300 current average loss 0.4812329045633485 current average acc 0.0%
+[2020-01-26 17:24:13 Info] Epoch 84, train set, Iter 400 current average loss 0.4824738410115267 current average acc 0.0%
+[2020-01-26 17:24:17 Info] Stats for train set of size 60000, loss is 0.47926426779429315, acc is 0.0%
+[2020-01-26 17:24:17 Info] Finished epoch number 84, Took 29 seconds
+[2020-01-26 17:24:17 Info] Training epoch number 85 with dataset number 8
+[2020-01-26 17:24:24 Info] Epoch 85, train set, Iter 100 current average loss 0.47438601899147 current average acc 0.0%
+[2020-01-26 17:24:30 Info] Epoch 85, train set, Iter 200 current average loss 0.4692003637999293 current average acc 0.0%
+[2020-01-26 17:24:36 Info] Epoch 85, train set, Iter 300 current average loss 0.4660750110050047 current average acc 0.0%
+[2020-01-26 17:24:43 Info] Epoch 85, train set, Iter 400 current average loss 0.4617447720915077 current average acc 0.0%
+[2020-01-26 17:24:47 Info] Stats for train set of size 60000, loss is 0.4621759285100293, acc is 0.0%
+[2020-01-26 17:24:47 Info] Finished epoch number 85, Took 29 seconds
+[2020-01-26 17:24:47 Info] Training epoch number 86 with dataset number 8
+[2020-01-26 17:24:54 Info] Epoch 86, train set, Iter 100 current average loss 0.44736204361915644 current average acc 0.0%
+[2020-01-26 17:25:00 Info] Epoch 86, train set, Iter 200 current average loss 0.444546127885581 current average acc 0.0%
+[2020-01-26 17:25:06 Info] Epoch 86, train set, Iter 300 current average loss 0.4495833542148271 current average acc 0.0%
+[2020-01-26 17:25:12 Info] Epoch 86, train set, Iter 400 current average loss 0.4496265675202023 current average acc 0.0%
+[2020-01-26 17:25:17 Info] Stats for train set of size 60000, loss is 0.4478705511744834, acc is 0.0%
+[2020-01-26 17:25:17 Info] Finished epoch number 86, Took 29 seconds
+[2020-01-26 17:25:17 Info] Training epoch number 87 with dataset number 8
+[2020-01-26 17:25:23 Info] Epoch 87, train set, Iter 100 current average loss 0.4314820356667039 current average acc 0.0%
+[2020-01-26 17:25:30 Info] Epoch 87, train set, Iter 200 current average loss 0.43438709522783836 current average acc 0.0%
+[2020-01-26 17:25:36 Info] Epoch 87, train set, Iter 300 current average loss 0.4376082687675953 current average acc 0.0%
+[2020-01-26 17:25:42 Info] Epoch 87, train set, Iter 400 current average loss 0.43856372508406655 current average acc 0.0%
+[2020-01-26 17:25:47 Info] Stats for train set of size 60000, loss is 0.4368500347344078, acc is 0.0%
+[2020-01-26 17:25:47 Info] Finished epoch number 87, Took 30 seconds
+[2020-01-26 17:25:47 Info] Training epoch number 88 with dataset number 8
+[2020-01-26 17:25:53 Info] Epoch 88, train set, Iter 100 current average loss 0.43357869186997416 current average acc 0.0%
+[2020-01-26 17:25:59 Info] Epoch 88, train set, Iter 200 current average loss 0.4277792850583794 current average acc 0.0%
+[2020-01-26 17:26:06 Info] Epoch 88, train set, Iter 300 current average loss 0.4282776757329707 current average acc 0.0%
+[2020-01-26 17:26:12 Info] Epoch 88, train set, Iter 400 current average loss 0.42919595944508887 current average acc 0.0%
+[2020-01-26 17:26:17 Info] Stats for train set of size 60000, loss is 0.42819621989409157, acc is 0.0%
+[2020-01-26 17:26:17 Info] Finished epoch number 88, Took 29 seconds
+[2020-01-26 17:26:17 Info] Training epoch number 89 with dataset number 8
+[2020-01-26 17:26:23 Info] Epoch 89, train set, Iter 100 current average loss 0.41386670050025004 current average acc 0.0%
+[2020-01-26 17:26:29 Info] Epoch 89, train set, Iter 200 current average loss 0.4194388514310124 current average acc 0.0%
+[2020-01-26 17:26:35 Info] Epoch 89, train set, Iter 300 current average loss 0.42129274247090015 current average acc 0.0%
+[2020-01-26 17:26:42 Info] Epoch 89, train set, Iter 400 current average loss 0.41814207825809724 current average acc 0.0%
+[2020-01-26 17:26:46 Info] Stats for train set of size 60000, loss is 0.4196627172120415, acc is 0.0%
+[2020-01-26 17:26:46 Info] Running test set for epoch number 89 for dataset idx 0 using test_mc
+[2020-01-26 17:26:49 Info] Stats for test [test_mc] set of size 10000, loss is 1.5443949031829842, acc is 54.66999999999999%
+[2020-01-26 17:26:49 Info] Running test set for epoch number 89 for dataset idx 1 using test_mc
+[2020-01-26 17:26:52 Info] Stats for test [test_mc] set of size 10000, loss is 1.5001384442901626, acc is 48.50400000000007%
+[2020-01-26 17:26:52 Info] Running test set for epoch number 89 for dataset idx 2 using test_mc
+[2020-01-26 17:26:55 Info] Stats for test [test_mc] set of size 10000, loss is 1.4450489429855349, acc is 49.29199999999997%
+[2020-01-26 17:26:55 Info] Running test set for epoch number 89 for dataset idx 3 using test_mc
+[2020-01-26 17:26:57 Info] Stats for test [test_mc] set of size 10000, loss is 0.7876048757743837, acc is 70.48700000000022%
+[2020-01-26 17:26:57 Info] Running test set for epoch number 89 for dataset idx 4 using test_mc
+[2020-01-26 17:27:00 Info] Stats for test [test_mc] set of size 10000, loss is 1.0882329035949698, acc is 60.59800000000002%
+[2020-01-26 17:27:00 Info] Running test set for epoch number 89 for dataset idx 5 using test_mc
+[2020-01-26 17:27:03 Info] Stats for test [test_mc] set of size 10000, loss is 0.961555189261437, acc is 69.14400000000008%
+[2020-01-26 17:27:03 Info] Running test set for epoch number 89 for dataset idx 6 using test_mc
+[2020-01-26 17:27:06 Info] Stats for test [test_mc] set of size 10000, loss is 0.7735082998800277, acc is 70.78799999999998%
+[2020-01-26 17:27:06 Info] Running test set for epoch number 89 for dataset idx 7 using test_mc
+[2020-01-26 17:27:09 Info] Stats for test [test_mc] set of size 10000, loss is 0.50415919927597, acc is 81.31200000000001%
+[2020-01-26 17:27:09 Info] Running test set for epoch number 89 for dataset idx 8 using test_mc
+[2020-01-26 17:27:11 Info] Stats for test [test_mc] set of size 10000, loss is 0.450003839020729, acc is 84.00400000000005%
+[2020-01-26 17:27:11 Info] Running test set for epoch number 89 for dataset idx 9 using test_mc
+[2020-01-26 17:27:14 Info] Stats for test [test_mc] set of size 10000, loss is 3.6667021448516834, acc is 22.776999999999983%
+[2020-01-26 17:27:14 Info] Average accuracy over all tasks for epoch number 89 for dataset idx 9 using test_mc is 61.15760000000004
+[2020-01-26 17:27:14 Info] Finished epoch number 89, Took 57 seconds
+[2020-01-26 17:27:14 Info] Training epoch number 90 with dataset number 8
+[2020-01-26 17:27:21 Info] Epoch 90, train set, Iter 100 current average loss 0.4193811820000405 current average acc 0.0%
+[2020-01-26 17:27:27 Info] Epoch 90, train set, Iter 200 current average loss 0.420143490381539 current average acc 0.0%
+[2020-01-26 17:27:33 Info] Epoch 90, train set, Iter 300 current average loss 0.4165374570935954 current average acc 0.0%
+[2020-01-26 17:27:39 Info] Epoch 90, train set, Iter 400 current average loss 0.4142047860957676 current average acc 0.0%
+[2020-01-26 17:27:44 Info] Stats for train set of size 60000, loss is 0.412999103029569, acc is 0.0%
+[2020-01-26 17:27:44 Info] Running test set for epoch number 90 for dataset idx 0 using test_mc
+[2020-01-26 17:27:46 Info] Stats for test [test_mc] set of size 10000, loss is 1.5494970612144467, acc is 55.18799999999997%
+[2020-01-26 17:27:46 Info] Running test set for epoch number 90 for dataset idx 1 using test_mc
+[2020-01-26 17:27:49 Info] Stats for test [test_mc] set of size 10000, loss is 1.4741749212837227, acc is 49.81200000000001%
+[2020-01-26 17:27:49 Info] Running test set for epoch number 90 for dataset idx 2 using test_mc
+[2020-01-26 17:27:52 Info] Stats for test [test_mc] set of size 10000, loss is 1.4168420040035241, acc is 50.345000000000056%
+[2020-01-26 17:27:52 Info] Running test set for epoch number 90 for dataset idx 3 using test_mc
+[2020-01-26 17:27:55 Info] Stats for test [test_mc] set of size 10000, loss is 0.7732164016866688, acc is 71.00899999999997%
+[2020-01-26 17:27:55 Info] Running test set for epoch number 90 for dataset idx 4 using test_mc
+[2020-01-26 17:27:58 Info] Stats for test [test_mc] set of size 10000, loss is 1.0764051053047168, acc is 60.890000000000015%
+[2020-01-26 17:27:58 Info] Running test set for epoch number 90 for dataset idx 5 using test_mc
+[2020-01-26 17:28:00 Info] Stats for test [test_mc] set of size 10000, loss is 0.9890039451980586, acc is 68.75999999999988%
+[2020-01-26 17:28:00 Info] Running test set for epoch number 90 for dataset idx 6 using test_mc
+[2020-01-26 17:28:03 Info] Stats for test [test_mc] set of size 10000, loss is 0.7638494384050366, acc is 71.34200000000001%
+[2020-01-26 17:28:03 Info] Running test set for epoch number 90 for dataset idx 7 using test_mc
+[2020-01-26 17:28:06 Info] Stats for test [test_mc] set of size 10000, loss is 0.507758254766463, acc is 81.1689999999999%
+[2020-01-26 17:28:06 Info] Running test set for epoch number 90 for dataset idx 8 using test_mc
+[2020-01-26 17:28:09 Info] Stats for test [test_mc] set of size 10000, loss is 0.4449786233186728, acc is 84.21499999999999%
+[2020-01-26 17:28:09 Info] Running test set for epoch number 90 for dataset idx 9 using test_mc
+[2020-01-26 17:28:12 Info] Stats for test [test_mc] set of size 10000, loss is 3.8120649016189585, acc is 23.031000000000027%
+[2020-01-26 17:28:12 Info] Average accuracy over all tasks for epoch number 90 for dataset idx 9 using test_mc is 61.57609999999997
+[2020-01-26 17:28:12 Info] Finished epoch number 90, Took 57 seconds
+[2020-01-26 17:28:12 Info] Training epoch number 91 with dataset number 9
+[2020-01-26 17:28:18 Info] Epoch 91, train set, Iter 100 current average loss 1.1129943882823001 current average acc 0.0%
+[2020-01-26 17:28:25 Info] Epoch 91, train set, Iter 200 current average loss 0.9223358027935021 current average acc 0.0%
+[2020-01-26 17:28:31 Info] Epoch 91, train set, Iter 300 current average loss 0.8337447697222239 current average acc 0.0%
+[2020-01-26 17:28:37 Info] Epoch 91, train set, Iter 400 current average loss 0.7748177284970907 current average acc 0.0%
+[2020-01-26 17:28:41 Info] Stats for train set of size 60000, loss is 0.7484237477239016, acc is 0.0%
+[2020-01-26 17:28:41 Info] Running test set for epoch number 91 for dataset idx 0 using test_mc
+[2020-01-26 17:28:44 Info] Stats for test [test_mc] set of size 10000, loss is 1.9117520179748535, acc is 46.89%
+[2020-01-26 17:28:44 Info] Running test set for epoch number 91 for dataset idx 1 using test_mc
+[2020-01-26 17:28:47 Info] Stats for test [test_mc] set of size 10000, loss is 1.9952979507446291, acc is 39.11199999999994%
+[2020-01-26 17:28:47 Info] Running test set for epoch number 91 for dataset idx 2 using test_mc
+[2020-01-26 17:28:50 Info] Stats for test [test_mc] set of size 10000, loss is 1.61697135608673, acc is 44.28799999999999%
+[2020-01-26 17:28:50 Info] Running test set for epoch number 91 for dataset idx 3 using test_mc
+[2020-01-26 17:28:53 Info] Stats for test [test_mc] set of size 10000, loss is 1.0074301379871378, acc is 61.59299999999997%
+[2020-01-26 17:28:53 Info] Running test set for epoch number 91 for dataset idx 4 using test_mc
+[2020-01-26 17:28:55 Info] Stats for test [test_mc] set of size 10000, loss is 1.3809145013713857, acc is 50.491999999999926%
+[2020-01-26 17:28:55 Info] Running test set for epoch number 91 for dataset idx 5 using test_mc
+[2020-01-26 17:28:58 Info] Stats for test [test_mc] set of size 10000, loss is 0.8726769319343581, acc is 69.09899999999978%
+[2020-01-26 17:28:58 Info] Running test set for epoch number 91 for dataset idx 6 using test_mc
+[2020-01-26 17:29:01 Info] Stats for test [test_mc] set of size 10000, loss is 0.9581611371135716, acc is 62.747000000000064%
+[2020-01-26 17:29:01 Info] Running test set for epoch number 91 for dataset idx 7 using test_mc
+[2020-01-26 17:29:04 Info] Stats for test [test_mc] set of size 10000, loss is 0.5955668689203263, acc is 78.92000000000007%
+[2020-01-26 17:29:04 Info] Running test set for epoch number 91 for dataset idx 8 using test_mc
+[2020-01-26 17:29:07 Info] Stats for test [test_mc] set of size 10000, loss is 0.5869972999572765, acc is 78.90299999999974%
+[2020-01-26 17:29:07 Info] Running test set for epoch number 91 for dataset idx 9 using test_mc
+[2020-01-26 17:29:09 Info] Stats for test [test_mc] set of size 10000, loss is 0.6048277774906171, acc is 78.42799999999991%
+[2020-01-26 17:29:09 Info] Average accuracy over all tasks for epoch number 91 for dataset idx 9 using test_mc is 61.04719999999994
+[2020-01-26 17:29:09 Info] Finished epoch number 91, Took 57 seconds
+[2020-01-26 17:29:09 Info] Training epoch number 92 with dataset number 9
+[2020-01-26 17:29:15 Info] Epoch 92, train set, Iter 100 current average loss 0.5670785467922695 current average acc 0.0%
+[2020-01-26 17:29:22 Info] Epoch 92, train set, Iter 200 current average loss 0.5604443542957306 current average acc 0.0%
+[2020-01-26 17:29:28 Info] Epoch 92, train set, Iter 300 current average loss 0.5560486190716385 current average acc 0.0%
+[2020-01-26 17:29:34 Info] Epoch 92, train set, Iter 400 current average loss 0.5488922044113249 current average acc 0.0%
+[2020-01-26 17:29:39 Info] Stats for train set of size 60000, loss is 0.5443150870736421, acc is 0.0%
+[2020-01-26 17:29:39 Info] Finished epoch number 92, Took 29 seconds
+[2020-01-26 17:29:39 Info] Training epoch number 93 with dataset number 9
+[2020-01-26 17:29:45 Info] Epoch 93, train set, Iter 100 current average loss 0.5075901320278645 current average acc 0.0%
+[2020-01-26 17:29:51 Info] Epoch 93, train set, Iter 200 current average loss 0.5073075476586828 current average acc 0.0%
+[2020-01-26 17:29:57 Info] Epoch 93, train set, Iter 300 current average loss 0.503749829908212 current average acc 0.0%
+[2020-01-26 17:30:04 Info] Epoch 93, train set, Iter 400 current average loss 0.5013115475401286 current average acc 0.0%
+[2020-01-26 17:30:08 Info] Stats for train set of size 60000, loss is 0.5009701845486972, acc is 0.0%
+[2020-01-26 17:30:08 Info] Finished epoch number 93, Took 29 seconds
+[2020-01-26 17:30:08 Info] Training epoch number 94 with dataset number 9
+[2020-01-26 17:30:15 Info] Epoch 94, train set, Iter 100 current average loss 0.4934364232718951 current average acc 0.0%
+[2020-01-26 17:30:21 Info] Epoch 94, train set, Iter 200 current average loss 0.4854679920673377 current average acc 0.0%
+[2020-01-26 17:30:27 Info] Epoch 94, train set, Iter 300 current average loss 0.4794036167959371 current average acc 0.0%
+[2020-01-26 17:30:33 Info] Epoch 94, train set, Iter 400 current average loss 0.47933975675701973 current average acc 0.0%
+[2020-01-26 17:30:38 Info] Stats for train set of size 60000, loss is 0.47705545400301463, acc is 0.0%
+[2020-01-26 17:30:38 Info] Finished epoch number 94, Took 29 seconds
+[2020-01-26 17:30:38 Info] Training epoch number 95 with dataset number 9
+[2020-01-26 17:30:44 Info] Epoch 95, train set, Iter 100 current average loss 0.4685078241825101 current average acc 0.0%
+[2020-01-26 17:30:50 Info] Epoch 95, train set, Iter 200 current average loss 0.46323187221586687 current average acc 0.0%
+[2020-01-26 17:30:57 Info] Epoch 95, train set, Iter 300 current average loss 0.46160877259572264 current average acc 0.0%
+[2020-01-26 17:31:03 Info] Epoch 95, train set, Iter 400 current average loss 0.4586942262127979 current average acc 0.0%
+[2020-01-26 17:31:07 Info] Stats for train set of size 60000, loss is 0.45866937258720275, acc is 0.0%
+[2020-01-26 17:31:07 Info] Finished epoch number 95, Took 29 seconds
+[2020-01-26 17:31:07 Info] Training epoch number 96 with dataset number 9
+[2020-01-26 17:31:14 Info] Epoch 96, train set, Iter 100 current average loss 0.43550747761130376 current average acc 0.0%
+[2020-01-26 17:31:20 Info] Epoch 96, train set, Iter 200 current average loss 0.43796256098151276 current average acc 0.0%
+[2020-01-26 17:31:26 Info] Epoch 96, train set, Iter 300 current average loss 0.4426590889990326 current average acc 0.0%
+[2020-01-26 17:31:33 Info] Epoch 96, train set, Iter 400 current average loss 0.44480220836400963 current average acc 0.0%
+[2020-01-26 17:31:37 Info] Stats for train set of size 60000, loss is 0.445519068002701, acc is 0.0%
+[2020-01-26 17:31:37 Info] Finished epoch number 96, Took 29 seconds
+[2020-01-26 17:31:37 Info] Training epoch number 97 with dataset number 9
+[2020-01-26 17:31:43 Info] Epoch 97, train set, Iter 100 current average loss 0.4472746544480327 current average acc 0.0%
+[2020-01-26 17:31:49 Info] Epoch 97, train set, Iter 200 current average loss 0.4429234259575617 current average acc 0.0%
+[2020-01-26 17:31:55 Info] Epoch 97, train set, Iter 300 current average loss 0.4367212522576268 current average acc 0.0%
+[2020-01-26 17:32:02 Info] Epoch 97, train set, Iter 400 current average loss 0.43529827610030924 current average acc 0.0%
+[2020-01-26 17:32:06 Info] Stats for train set of size 60000, loss is 0.4348867162577327, acc is 0.0%
+[2020-01-26 17:32:06 Info] Finished epoch number 97, Took 29 seconds
+[2020-01-26 17:32:06 Info] Training epoch number 98 with dataset number 9
+[2020-01-26 17:32:12 Info] Epoch 98, train set, Iter 100 current average loss 0.43705264353752205 current average acc 0.0%
+[2020-01-26 17:32:19 Info] Epoch 98, train set, Iter 200 current average loss 0.4345877983123065 current average acc 0.0%
+[2020-01-26 17:32:25 Info] Epoch 98, train set, Iter 300 current average loss 0.4305032006700832 current average acc 0.0%
+[2020-01-26 17:32:31 Info] Epoch 98, train set, Iter 400 current average loss 0.42780000422894865 current average acc 0.0%
+[2020-01-26 17:32:36 Info] Stats for train set of size 60000, loss is 0.4259152793550489, acc is 0.0%
+[2020-01-26 17:32:36 Info] Finished epoch number 98, Took 29 seconds
+[2020-01-26 17:32:36 Info] Training epoch number 99 with dataset number 9
+[2020-01-26 17:32:42 Info] Epoch 99, train set, Iter 100 current average loss 0.41208944982290346 current average acc 0.0%
+[2020-01-26 17:32:48 Info] Epoch 99, train set, Iter 200 current average loss 0.41058766935765867 current average acc 0.0%
+[2020-01-26 17:32:55 Info] Epoch 99, train set, Iter 300 current average loss 0.4175983439584584 current average acc 0.0%
+[2020-01-26 17:33:01 Info] Epoch 99, train set, Iter 400 current average loss 0.417868781387806 current average acc 0.0%
+[2020-01-26 17:33:05 Info] Stats for train set of size 60000, loss is 0.4181805913225811, acc is 0.0%
+[2020-01-26 17:33:05 Info] Running test set for epoch number 99 for dataset idx 0 using test_mc
+[2020-01-26 17:33:08 Info] Stats for test [test_mc] set of size 10000, loss is 1.8692218626022337, acc is 50.55799999999997%
+[2020-01-26 17:33:08 Info] Running test set for epoch number 99 for dataset idx 1 using test_mc
+[2020-01-26 17:33:12 Info] Stats for test [test_mc] set of size 10000, loss is 1.8152042133331292, acc is 46.85600000000005%
+[2020-01-26 17:33:12 Info] Running test set for epoch number 99 for dataset idx 2 using test_mc
+[2020-01-26 17:33:15 Info] Stats for test [test_mc] set of size 10000, loss is 1.4896538332557678, acc is 46.72500000000008%
+[2020-01-26 17:33:15 Info] Running test set for epoch number 99 for dataset idx 3 using test_mc
+[2020-01-26 17:33:17 Info] Stats for test [test_mc] set of size 10000, loss is 0.9738931092929838, acc is 62.52000000000008%
+[2020-01-26 17:33:17 Info] Running test set for epoch number 99 for dataset idx 4 using test_mc
+[2020-01-26 17:33:20 Info] Stats for test [test_mc] set of size 10000, loss is 1.457612993373872, acc is 50.58599999999991%
+[2020-01-26 17:33:20 Info] Running test set for epoch number 99 for dataset idx 5 using test_mc
+[2020-01-26 17:33:23 Info] Stats for test [test_mc] set of size 10000, loss is 0.7942140574312212, acc is 69.96800000000015%
+[2020-01-26 17:33:23 Info] Running test set for epoch number 99 for dataset idx 6 using test_mc
+[2020-01-26 17:33:26 Info] Stats for test [test_mc] set of size 10000, loss is 0.9581469720935817, acc is 62.09299999999996%
+[2020-01-26 17:33:26 Info] Running test set for epoch number 99 for dataset idx 7 using test_mc
+[2020-01-26 17:33:29 Info] Stats for test [test_mc] set of size 10000, loss is 0.5887300422239303, acc is 78.63899999999997%
+[2020-01-26 17:33:29 Info] Running test set for epoch number 99 for dataset idx 8 using test_mc
+[2020-01-26 17:33:31 Info] Stats for test [test_mc] set of size 10000, loss is 0.6596550088977815, acc is 76.04899999999996%
+[2020-01-26 17:33:31 Info] Running test set for epoch number 99 for dataset idx 9 using test_mc
+[2020-01-26 17:33:34 Info] Stats for test [test_mc] set of size 10000, loss is 0.4502934145736697, acc is 84.07400000000001%
+[2020-01-26 17:33:34 Info] Average accuracy over all tasks for epoch number 99 for dataset idx 9 using test_mc is 62.80680000000002
+[2020-01-26 17:33:34 Info] Finished epoch number 99, Took 58 seconds
+[2020-01-26 17:33:34 Info] Training epoch number 100 with dataset number 9
+[2020-01-26 17:33:41 Info] Epoch 100, train set, Iter 100 current average loss 0.41015097977221043 current average acc 0.0%
+[2020-01-26 17:33:47 Info] Epoch 100, train set, Iter 200 current average loss 0.4085647722482691 current average acc 0.0%
+[2020-01-26 17:33:53 Info] Epoch 100, train set, Iter 300 current average loss 0.4111706395447261 current average acc 0.0%
+[2020-01-26 17:34:00 Info] Epoch 100, train set, Iter 400 current average loss 0.4145590888634332 current average acc 0.0%
+[2020-01-26 17:34:04 Info] Stats for train set of size 60000, loss is 0.4110733430910116, acc is 0.0%
+[2020-01-26 17:34:04 Info] Running test set for epoch number 100 for dataset idx 0 using test_mc
+[2020-01-26 17:34:07 Info] Stats for test [test_mc] set of size 10000, loss is 1.870189357357026, acc is 50.72999999999993%
+[2020-01-26 17:34:07 Info] Running test set for epoch number 100 for dataset idx 1 using test_mc
+[2020-01-26 17:34:09 Info] Stats for test [test_mc] set of size 10000, loss is 1.7607502729415885, acc is 47.866999999999955%
+[2020-01-26 17:34:09 Info] Running test set for epoch number 100 for dataset idx 2 using test_mc
+[2020-01-26 17:34:12 Info] Stats for test [test_mc] set of size 10000, loss is 1.4770703213024128, acc is 46.93300000000003%
+[2020-01-26 17:34:12 Info] Running test set for epoch number 100 for dataset idx 3 using test_mc
+[2020-01-26 17:34:15 Info] Stats for test [test_mc] set of size 10000, loss is 0.9500816241836559, acc is 63.30399999999997%
+[2020-01-26 17:34:15 Info] Running test set for epoch number 100 for dataset idx 4 using test_mc
+[2020-01-26 17:34:18 Info] Stats for test [test_mc] set of size 10000, loss is 1.4137283474826794, acc is 50.97799999999996%
+[2020-01-26 17:34:18 Info] Running test set for epoch number 100 for dataset idx 5 using test_mc
+[2020-01-26 17:34:21 Info] Stats for test [test_mc] set of size 10000, loss is 0.7749145026445392, acc is 71.43999999999993%
+[2020-01-26 17:34:21 Info] Running test set for epoch number 100 for dataset idx 6 using test_mc
+[2020-01-26 17:34:23 Info] Stats for test [test_mc] set of size 10000, loss is 0.9270652443933493, acc is 63.189999999999976%
+[2020-01-26 17:34:23 Info] Running test set for epoch number 100 for dataset idx 7 using test_mc
+[2020-01-26 17:34:26 Info] Stats for test [test_mc] set of size 10000, loss is 0.5739768697214126, acc is 79.24599999999998%
+[2020-01-26 17:34:26 Info] Running test set for epoch number 100 for dataset idx 8 using test_mc
+[2020-01-26 17:34:29 Info] Stats for test [test_mc] set of size 10000, loss is 0.6234492099809649, acc is 77.01199999999999%
+[2020-01-26 17:34:29 Info] Running test set for epoch number 100 for dataset idx 9 using test_mc
+[2020-01-26 17:34:32 Info] Stats for test [test_mc] set of size 10000, loss is 0.4446499331092837, acc is 84.1909999999999%
+[2020-01-26 17:34:32 Info] Average accuracy over all tasks for epoch number 100 for dataset idx 9 using test_mc is 63.48909999999995
+[2020-01-26 17:34:32 Info] Finished epoch number 100, Took 57 seconds
