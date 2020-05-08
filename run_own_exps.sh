@@ -41,3 +41,6 @@ python main.py --logname discrete_domain_split_mnist_5tasks_10epochs_seed2019 --
 # Discrete task agnostic on Split Fashion MNIST (5 epochs per task) domain learning, network:[400,400]
 python main.py --logname discrete_domain_split_fmnist_5tasks_4epochs_seed2019 --nn_arch mnist_simple_net_400width_domainlearning_1024input_2cls_1ds --test_freq 5 --seed 2019 --permute_seed 2019 --dataset ds_padded_split_fmnist --num_epochs $(( 5 * 4 )) --optimizer bgd --std_init 0.02 --batch_size 128 --results_dir split_fmnist --train_mc_iters 10 --inference_mc --test_mc_iters 10
 
+## CONTINUOUS PERMUTED MNIST
+# 10 tasks (which is 9 permutations in addition to the original MNIST) with 10 epochs
+python main.py --logname continuous_permuted_mnist_10tasks --num_workers 1 --test_freq 10 --permute_seed 2019 --seed 2019 --iterations_per_virtual_epc 469 --contpermuted_beta 4 --num_of_permutations 9 --optimizer bgd --nn_arch mnist_simple_net_200width_domainlearning_1024input_10cls_1ds --dataset ds_padded_cont_permuted_mnist --num_epochs $(( 10 * 10 )) --std_init 0.06 --batch_size 128 --results_dir continuous --train_mc_iters 10 --inference_mc --test_mc_iters 10
