@@ -182,13 +182,15 @@ class DatasetsLoaders:
             self.mean = mnist_mean
             self.std = mnist_std
             if kwargs.get("pad_to_32", False):
+                raise RuntimeError("Padding should be disabled!")
                 transform = transforms.Compose(
                     [transforms.Pad(2, fill=0, padding_mode='constant'),
                      transforms.ToTensor(),
-                     transforms.Normalize(mean=(0.1000,), std=(0.2752,))])
+                     transforms.Normalize(mean=(0.1307,), std=(0.3081,))])
             else:
                 transform = transforms.Compose(
-                    [transforms.ToTensor()])
+                    [transforms.ToTensor(),
+                     transforms.Normalize(mean=(0.1307,), std=(0.3081,))])
 
             # Create train set
             self.train_set = torchvision.datasets.MNIST(root='./data/mnist', train=True,
@@ -244,13 +246,15 @@ class DatasetsLoaders:
             self.mean = fashionmnist_mean
             self.std = fashionmnist_std
             if kwargs.get("pad_to_32", False):
+                raise RuntimeError("Padding should be disabled!")
                 transform = transforms.Compose(
                     [transforms.Pad(2, fill=0, padding_mode='constant'),
                      transforms.ToTensor(),
-                     transforms.Normalize((72.94035223214286 / 255,), (90.0211833054075 / 255,))])
+                     transforms.Normalize(mean=(0.2861,), std=(0.3530,))])
             else:
                 transform = transforms.Compose(
-                    [transforms.ToTensor()])
+                    [transforms.ToTensor(),
+                    transforms.Normalize(mean=(0.2861,), std=(0.3530,))])
 
             # Create train set
             self.train_set = torchvision.datasets.FashionMNIST(root='./data/fashion_mnist', train=True,
